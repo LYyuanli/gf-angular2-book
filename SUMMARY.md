@@ -4,7 +4,7 @@
 * Part 1 - 快速上手
    * 前端开发现状
    * Quick Start
-   * Angular2 基本概念
+   * [Angular2 基本概念](chapters/angular2-overview.md)
    * Typescript 语言简介
 * [Part 2 - 深入理解](part_1_-_kuai_su_shang_shou.md)
 
