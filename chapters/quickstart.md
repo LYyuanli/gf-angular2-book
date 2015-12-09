@@ -1,6 +1,6 @@
 # 快速开始
 
-提供了JavaScript以及TypeScript两种语言版本的实例，相关代码可以从[这里下载](https://github.com/gf-rd/gf-angular2-quickstart)
+提供了JavaScript以及TypeScript两种语言版本的实例，相关代码可以从[这里下载](../codes/quickstart-js.zip)
 
 ## 一、使用JavaScript快速开始
 
