@@ -5,7 +5,7 @@
 ## 一、使用JavaScript快速开始
 
 ### 环境准备
-- 已经安装好最新稳定版 __node__ 以及 __npm__。
+- 已经安装好最新稳定版 __node__ 以及 __npm__
 
 ### 步骤
 
@@ -22,13 +22,13 @@
   ```
 - 安装相关类库
 
-  创建 __package.json__ 文件。
+  创建 __package.json__ 文件
 
   ```bash
   npm init
   ```
 
-  安装最新版Angular 2，目前最新版本号是2.0.0-alpha.48。
+  安装最新版Angular 2，目前最新版本号是2.0.0-alpha.48
 
   ```bash
   npm install angular2@latest --save
