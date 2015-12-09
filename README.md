@@ -1,4 +1,4 @@
-My Awesome Book
+Angular 2 入门到实战
 =======
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+Delivered by Gf securities Frontend team with love!
