@@ -90,6 +90,8 @@ reset(true);
 这点和ES6一致。箭头函数内部保持和外部一样的this上下文。
 
 - 重载
+- 装饰器
+
 ## 模块
 
 
@@ -98,6 +100,8 @@ reset(true);
 # Generic #
 
 Generic classes are only generic over their instance side rather than their static side, so when working with classes, static members cannt use the class's type parameter.
+
+## 
 
 ## Typescript工具
 
