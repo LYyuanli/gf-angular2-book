@@ -1,10 +1,14 @@
 ## Angular2 Overview
 
 ```bash
-草稿
-先是引言 （承前启后）
-然后就用官方的架构讲解7大概念，最后是其他小概念。
-加入中文示例图片
+
+文档状态：
+草稿，完成旧guide的7大概念和小概念的阐述
+
+Todo:
+- 先是引言 （承前启后）
+- 加入中文图示？
+- 加入全局认识的串讲
 ```
 
 ### 引言
@@ -19,7 +23,7 @@ Angular 2 是一个帮助我们用 html 和 javascript 构建客户端程序的�
 我们在高纬度通过俯视看这些坐标型的概念来获得全局认识，详细的讲解会在后续的章节逐步开展。
 一个Angular2的应用程序一般有以下7个主要的部分组成：
 
-`<Todo: 图>`
+![angular-overview-core-conepts](../_images/angular-overview-core-conepts.png "angular-overview-core-conepts.png")
 
 
 ### 组件
@@ -88,6 +92,7 @@ providers: 是组件所需的服务的依赖注入的提供者providers数组。
 template模板，metadata元数据， 和组件一起描述了视图。
 随着我们不断了解angular2，我们也逐步学习其他通过metadata decorators 元数据装饰器来指导angular行为的常用decorators，如：@Injectable, @Input, @Output, @RouterConfig 等
 
+
 ### 数据绑定
 不借助框架，我们需要手动把数据值更新到html的控件中和把用户的交互转变为值变化和方法调用。手工写这种推拉的更新逻辑非常费时，而且容易出错。正如熟练的jQuery程序员证明的那样是场噩梦！
 angular支持数据绑定，一种协调同步模板和组件其他部分的机制。通过在模板中加入binding绑定的markup标记，我们告诉angular如何把两个部分组合在一起。
@@ -99,7 +104,7 @@ angular支持数据绑定，一种协调同步模板和组件其他部分的机�
 ```html
 <div ... >{{hero.name}}</div>
 <hero-detail ... [hero]="selectedHero"></hero-detail>
-<div ... (click)="selectHero(hero)></div>
+<div ... (click)="selectHero(hero)"></div>
 ```
 
 {{hero.name}}  这种是字符串内插，来在div 标签中显示组件的hero.name 属性
@@ -114,15 +119,28 @@ angular支持数据绑定，一种协调同步模板和组件其他部分的机�
 
 angular 每个javascript 事件循环中一次性处理全部的数据绑定，从应用的组件树根部开始，深度优先。具体细节我们在后续章节有阐述，现在看起来数据绑定在模板和组件间 和 父子组件之间的通讯都起着非常重要的作用。
 
+
 ### 指令
 我们的angular模板是动态的。 当angular渲染模板时，它把根据directive提供的指示来把模板变成DOM
 指令是配有指令元数据的类。 在typescript中，我们通过@Directive装饰器来给类添加元数据。
 我们已经了解了一种形式的指令：Component。 组件就是一个拥有模板，通过@Componenter而不是@Directive 来提供模板导向的特性。
 还有其他两种，我们称为 结构 和 属性attribute的指令。
 
-Todo：
-- structural directive
-- attribute directive
+#### structural directive
+结构指令通过添加，删除和替换在DOM树中的元素来改变布局layouts。 看下自带的两个结构指令的用法：
+
+```html
+<div *ngFor="#hero of heroes"></div>
+<hero-detail *ngIf="selectedHero"></hero-detail>
+```
+
+#### attribute directive
+属性指令来改变现有元素的展现和行为。在模板中他们看起来想是正常的HTML属性，因此得名。
+如 ngModel 指令，用于实现数据的双向绑定，如：
+
+```html
+<input [(ngModel)]="hero.name">
+```
 
 
 ### 服务
@@ -172,10 +190,11 @@ bootstrap(AppComponent, [
   BackendService, HeroService, Logger
 ]);
 ```
+
 更详细的依赖注入请见后续的章节一探究竟~
 
 
-### Misc
+### 其他
 通过以上的介绍，我们对于构建Angular app的七个部分已经有了解了。 它们是构建Angular应用程序的关键和基础。
 一下是一份简短的按照字母表顺序排序的其他Angular 的特性和services. 绝大部分会在后续的章节中有进一步的讲解和使用。
 
@@ -208,3 +227,5 @@ DOM触发事件，同样组件和服务也可以触发。Angular 提供了用于
 
 #### Testing
 Angular提供的测试库可以和框架本身来交互，从而可以方便的给我们的应用程序做单元测试
+
+
