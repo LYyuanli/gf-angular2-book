@@ -126,10 +126,53 @@ Todo：
 
 
 ### 服务
+Service 是个很宽泛的概念，来封装应用所需要的任意值，方法和特性。
+虽然任何代码都可以成为service，但通常，一个服务有一个特定聚焦的目的。譬如：
+
+- 日志服务
+- 数据服务
+- message bus消息总线
+- 税收计算器
+- 应用配置功能
+
+Angular本身没有对service有特殊的定义，没有所谓的基础类，没有用于注册service的地方。
+但services对Angular也是至关重要的，因为我们的组件式services的使用消费大户
+我们通常保持组件类组件精简轻量，它本身不去从服务器拉取数据，不做用户数输入的验证，不直接把日志信息达到console中。他们把这些任务委派给 services
+一个好的组件拥有属性和方法来用于数据绑定，同时把一些通用的业务委托给services
+Angular 不强制约束限制这样的原则，即使你可能写一个3k多行的大杂烩的巨型组件
+但是它帮助我们实施时遵守这样的原则，譬如通过依赖注入让那些处理应用业务逻辑的services可以方便的被组件使用。
+
 
 ### 依赖注入
 依赖注入是类在创建新的实例时提供它所需的全部依赖的一种声明方式。绝大部分的依赖是服务。angular通过依赖注入机制给component提供它们所需要的服务。
-Todo
+在 TypeScript 中，Angular 通过查看组件的构建函数的参数获得组件所需要的services，譬如 HeroListComponent 的构建函数需要 HeroService，代码如下：
+
+```js
+constructor(service: HeroService) {
+  this.heroes = service.getHeroes();
+}
+```
+当Angular创建该组件时，它首先通过向`Injector`请求所需要的service实例. 
+Injector是维持存放着它创建的各服务实例的容器
+Injector 通过 `Provider` 来创建新的服务实例
+Provider 是用来创建service的代码方法
+
+我们可以在应用组件树的任意的层级注册providers，通常我们在启动bootstrap应用的根组件出注册，这样整个应用的其他地方都可以用同一个服务实例。
+
+```js
+bootstrap(AppComponent, [
+  BackendService, HeroService, Logger
+]);
+```
+
+同样，我们可以在特定组件层级来注册：通过annotation语法
+
+```js
+bootstrap(AppComponent, [
+  BackendService, HeroService, Logger
+]);
+```
+更详细的依赖注入请见后续的章节一探究竟~
 
 
 ### Misc
