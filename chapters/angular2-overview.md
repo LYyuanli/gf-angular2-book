@@ -136,4 +136,32 @@ Todo
 通过以上的介绍，我们对于构建Angular app的七个部分已经有了解了。 它们是构建Angular应用程序的关键和基础。
 一下是一份简短的按照字母表顺序排序的其他Angular 的特性和services. 绝大部分会在后续的章节中有进一步的讲解和使用。
 
-Animation
+#### Animation
+面向未来的动画库，使得开发者可以很容易的给组件行为加动画，而不需要过多了解动画技术或css的知识
+
+#### Bootstrap
+用来配置和启动应用程序的根组件的方法
+
+#### Change Detection
+Angular 内部如何知道组件属性改变和何时去更新页面显示。 Angular如合理利用 zones 机制去拦截异步行为和实施它的脏检查策略
+
+#### Component Router
+利用该Service，用户像浏览器通过urls跳转一样，在多屏应用中浏览跳转切换页面。
+
+#### Events
+DOM触发事件，同样组件和服务也可以触发。Angular 提供了用于发布和订阅事件的机制，该机制包括了[RxJS 观察者提议](https://github.com/zenparsing/es-observable)的实现
+
+#### Forms
+通过HTML为基础的验证和脏检查，支持复杂数据条目的场景
+
+#### HTTP
+通过 Angular HTTP Client客户端，和服务器通信来拉取数据，提交保存数据和调用服务器端的方法。
+
+#### Lifecycle Hooks
+通过实现生命周期钩子的接口，我们开发者可以在组件生命周期的关键时刻（如从创建到销毁）插入自己的行为
+
+#### Pipes
+用来转化格式化数据来显示的服务。在模板层使用pipes管道来提升用户体验，譬如，下方展示了 currency 现金的管道表达式：`price | currency: 'USD':true` 来把价格为42.33格式化为`$42.33`
+
+#### Testing
+Angular提供的测试库可以和框架本身来交互，从而可以方便的给我们的应用程序做单元测试
