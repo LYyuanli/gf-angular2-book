@@ -1,3 +1,5 @@
+# Typescript
+
 ## 什么是Typescript?
 Javascript是一种弱类型的语言，在开发一些小型项目，UI交互的时候很灵活，方便。
 但是当项目变的庞大的时候，就显露出很明显的弊端。
@@ -71,138 +73,146 @@ Popup.getInstance();
 ## 函数
 
 - 可选/默认参数
-```typescript
-function reset(hard?: boolean) {
-	if (hard) {
-		resetDB();
+	```typescript
+	function reset(hard?: boolean) {
+		if (hard) {
+			resetDB();
+		}
+		resetUI();
 	}
-	resetUI();
-}
-reset();
-reset(true);
-
-```
+	reset();
+	reset(true);
+	```
 
 - 剩余参数
-可变数目的参数需要使用剩余参数的写法。获得的参数将是一个数组。
-```typescript
-function max(...nums: number[]) {
-	...
-}
-```
+
+	可变数目的参数需要使用剩余参数的写法。获得的参数将是一个数组。
+
+	```typescript
+	function max(...nums: number[]) {
+		...
+	}
+	```
 
 - 箭头函数
-这点和ES6一致。箭头函数内部保持和外部一样的this上下文。
-```typescript
-var Scheduler = {
-	queue: [],
-	schedule(t: Task) {
-		setTimeout(()=> {
-			this.queue.push(t);
-		}, 0);
-	}
-};
-Scheduler.schedule(new Task());
-```
+
+	这点和ES6一致。箭头函数内部保持和外部一样的this上下文。
+
+	```typescript
+	var Scheduler = {
+		queue: [],
+		schedule(t: Task) {
+			setTimeout(()=> {
+				this.queue.push(t);
+			}, 0);
+		}
+	};
+	Scheduler.schedule(new Task());
+	```
 
 - 重载
-js函数支持不同的参数进行重载。例如jquery的css函数
-```typescript
-css({
-	width: '100px'
-})
-css('width', '100px')
-```
-可以这样调用。我们可以为该函数声明重载。
-```typescript
-function css(config: object);
-function css(config: string, value: string);
-function css(config: any, value?: any) {
-	if (typeof config == 'string') {
-		...
-	} else if (typeof config == 'object') {
-		...
+
+	js函数支持不同的参数进行重载。例如jquery的css函数
+
+	```typescript
+	css({
+		width: '100px'
+	})
+	css('width', '100px')
+	```
+
+	可以这样调用。我们可以为该函数声明重载。
+
+	```typescript
+	function css(config: object);
+	function css(config: string, value: string);
+	function css(config: any, value?: any) {
+		if (typeof config == 'string') {
+			...
+		} else if (typeof config == 'object') {
+			...
+		}
 	}
-}
-```
-这个函数有两个重载，编译器会判断参数类型是否符合其中一个。
+	```
+	这个函数有两个重载，编译器会判断参数类型是否符合其中一个。
 
 - 装饰器(decorator)
 
-Typescript的装饰器和ES6里面的一致。可以修改已有的类或类的方法，也可以在它们的基础上提供一层封装。
-Angular2里面大量使用装饰器，为组件注册元数据。
+	Typescript的装饰器和ES6里面的一致。可以修改已有的类或类的方法，也可以在它们的基础上提供一层封装。
+	Angular2里面大量使用装饰器，为组件注册元数据。
 
-1. 类的装饰器
+	1. 类的装饰器
 
-我们先来看看类的装饰器，以下面类的装饰器为例：
+	我们先来看看类的装饰器，以下面类的装饰器为例：
 
-```typescript
-@decorator
-class A {}
-```
+	```typescript
+	@decorator
+	class A {}
+	```
 
-这段代码其实等同于
+	这段代码其实等同于
 
-```typescript
-class A {}
-A = decorator(A) || A;
+	```typescript
+	class A {}
+	A = decorator(A) || A;
 
-function decorator(klass) {
-	klass.meta = 'my awesome class';
-}
-```
+	function decorator(klass) {
+		klass.meta = 'my awesome class';
+	}
+	```
 
-Angular里面的装饰器可以传入meta信息，如下：
+	Angular里面的装饰器可以传入meta信息，如下：
 
-```typescript
-@Component({
-	selector: 'my-app'
-})
-class MyApp {
+	```typescript
+	@Component({
+		selector: 'my-app'
+	})
+	class MyApp {
 
-}
-```
+	}
+	```
 
-Component其实是angular库里面实现的一个装饰器工厂，接受一个meta信息，返回一个装饰器。类似如下实现：
+	Component其实是angular库里面实现的一个装饰器工厂，接受一个meta信息，返回一个装饰器。类似如下实现：
 
-```typescript
-function Component(meta) {
-	return function (klass) {
-		...
-	};
-}
-```
+	```typescript
+	function Component(meta) {
+		return function (klass) {
+			...
+		};
+	}
+	```
 
-2. 类的方法的装饰器。
+	2. 类的方法的装饰器。
 
-还有一种装饰器是类的方法的装饰器。
+	还有一种装饰器是类的方法的装饰器。
 
-```typescript
-class Person {
-	@readonly
-	name() { return `${this.first} ${this.last}` }
-}
-```
+	```typescript
+	class Person {
+		@readonly
+		name() { return `${this.first} ${this.last}` }
+	}
+	```
 
-以上readonly方法将被如下的方式调用。
+	以上readonly方法将被如下的方式调用。
 
-```typescript
-function readonly(target, name, descriptor){
-	descriptor.writable = false;
-	return descriptor;
-}
+	```typescript
+	function readonly(target, name, descriptor){
+		descriptor.writable = false;
+		return descriptor;
+	}
 
-readonly(Person.prototype, 'name', descriptor);
-// descriptor对象的初始值如下
-// {
-//   value: oneFunction,
-//   enumerable: false,
-//   configurable: true,
-//   writable: true
-// };
-```
-
-可惜的是由于函数存在提升，没有函数的装饰器。
+	readonly(Person.prototype, 'name', descriptor);
+	// descriptor对象的初始值如下
+	// {
+	//   value: oneFunction,
+	//   enumerable: false,
+	//   configurable: true,
+	//   writable: true
+	// };
+	```
+	
+	3. 函数的装饰器呢？
+	可惜的是由于函数存在提升，没有函数的装饰器。
 
 
 ## 模块
@@ -343,7 +353,6 @@ console.log(heap2.min());
 ```
 
 泛型也支持函数。下面zip函数声明了两个泛型类型`T1` `T2`，并把两个数组压缩到一起。
-
 
 ```typescript
 function zip<T1, T2>(l1: T1[], l2: T2[]): [T1, T2][] {
