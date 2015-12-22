@@ -254,7 +254,7 @@
     
 - 在浏览器执行
 
-    我们已经通过package.json安装好typescript编辑器了，在根目录下执行tsc进行编译，转为为es5语法的js文件。
+    我们已经通过package.json安装好typescript编辑器了，在根目录下执行tsc进行编译，转为ES5语法的js文件。
     
     ```bash
     ./node_modules/typescript/bin/tsc 
@@ -263,3 +263,5 @@
     在chrome浏览器中执行，最终展示效果：
 
     `Hello World!`
+    
+    
