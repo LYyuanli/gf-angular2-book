@@ -108,8 +108,8 @@
 >2. 创建并编辑package.json文件
 >3. 创建并编辑tsconfig.json文件
 >4. 安装相关类库
->5. 创建工程主要文件
->6. 浏览器执行
+>5. 创建主要工程文件
+>6. 在浏览器执行
 
 - 创建工程目录
 
@@ -141,20 +141,122 @@
 
 - 创建并编辑tsconfig.json文件
 
-```javascript
-    {
-      "compilerOptions": {
-        "target": "ES5",
-        "module": "system",
-        "moduleResolution": "node",
-        "sourceMap": true,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "removeComments": false,
-        "noImplicitAny": false
-      },
-      "exclude": [
-        "node_modules"
-      ]
-    }
-```
+    ```javascript
+        {
+          "compilerOptions": {
+            "target": "ES5",
+            "module": "system",
+            "moduleResolution": "node",
+            "sourceMap": true,
+            "emitDecoratorMetadata": true,
+            "experimentalDecorators": true,
+            "removeComments": false,
+            "noImplicitAny": false
+          },
+          "exclude": [
+            "node_modules"
+          ]
+        }
+    ```
+
+- 安装相关类库
+
+    在__angular2-quickstart-ts__目录下运行 __npm install__
+
+    ```bash
+        npm install
+        
+        npm WARN package.json angular2-quickstart-ts@1.0.0 No description
+        npm WARN package.json angular2-quickstart-ts@1.0.0 No repository field.
+        npm WARN package.json angular2-quickstart-ts@1.0.0 No README data
+        
+        es6-promise@3.0.2 node_modules/es6-promise
+        es6-shim@0.33.13 node_modules/es6-shim
+        zone.js@0.5.10 node_modules/zone.js
+        reflect-metadata@0.1.2 node_modules/reflect-metadata
+        typescript@1.7.5 node_modules/typescript
+        systemjs@0.19.6 node_modules/systemjs
+        ├── when@3.7.5
+        └── es6-module-loader@0.17.9
+        rxjs@5.0.0-beta.0 node_modules/rxjs
+        angular2@2.0.0-beta.0 node_modules/angular2
+    ```
+
+    至此安装完毕。
+
+- 创建主要工程文件
+    
+    1. 在app目录下创建主程序文件app.component.ts
+    
+    ```typescript
+    import {Component} from 'angular2/core';
+    @Component({
+        selector: 'my-app',
+        template: '<h1>Hello World!</h1>'
+    })
+    export class AppComponent { }
+    ```
+    
+    2. 相同目录下创建引导文件boot.ts
+    
+    ```typescript
+    import {bootstrap}    from 'angular2/platform/browser'
+    import {AppComponent} from './app.component'
+    bootstrap(AppComponent);
+    ```
+    
+    3. 根目录下创建并编辑index.html
+    
+    ```html
+    <html>
+      <head>
+        <title>QuickStart</title>
+        <script src="node_modules/es6-shim/es6-shim.js"></script>
+        <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+        <script src="node_modules/systemjs/dist/system.src.js"></script>
+        <script src="node_modules/rxjs/bundles/Rx.js"></script>
+        <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+        <script>
+          System.config({
+            packages: {
+              app: {
+                format: 'register',
+                defaultExtension: 'js'
+              }
+            }
+          });
+          System.import('app/boot')
+                .then(null, console.error.bind(console));
+        </script>
+      </head>
+      <body>
+        <my-app>Loading...</my-app>
+      </body>
+    </html>
+    ```
+    
+    目录结构最终是这样的
+    
+    ```bash
+        tree .
+        
+        ├── app
+        │   ├── app.component.ts
+        │   └── boot.ts
+        ├── node_modules
+        ├── index.html
+        ├── package.json
+        └── tsconfig.json
+    ```
+    
+- 在浏览器执行
+
+    我们已经通过package.json安装好typescript编辑器了，在根目录下执行tsc进行编译，转为为es5语法的js文件。
+    
+    ```bash
+    ./node_modules/typescript/bin/tsc 
+    ```
+    
+    在chrome浏览器中执行，最终展示效果：
+
+    `Hello World!`
