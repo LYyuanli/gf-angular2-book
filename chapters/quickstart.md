@@ -1,6 +1,9 @@
 # 快速开始
 
-提供了JavaScript以及TypeScript两种语言版本的实例，相关代码可以从[这里下载](../codes/quickstart-js.zip)
+提供了JavaScript以及TypeScript两种语言版本的实例，相关代码可以从这里下载。
+
+- [JavaScript版本](../codes/quickstart-js.zip) 
+- [TypeScript版本](../codes/quickstart-ts.zip)
 
 ## 一、使用JavaScript快速开始
 
