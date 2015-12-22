@@ -186,7 +186,7 @@
 
 - 创建主要工程文件
     
-    1. 在app目录下创建主程序文件app.component.ts
+    在app目录下创建主程序文件app.component.ts
     
     ```typescript
     import {Component} from 'angular2/core';
@@ -197,7 +197,7 @@
     export class AppComponent { }
     ```
     
-    2. 相同目录下创建引导文件boot.ts
+    相同目录下创建引导文件boot.ts
     
     ```typescript
     import {bootstrap}    from 'angular2/platform/browser'
@@ -205,7 +205,7 @@
     bootstrap(AppComponent);
     ```
     
-    3. 根目录下创建并编辑index.html
+    根目录下创建并编辑index.html
     
     ```html
     <html>
