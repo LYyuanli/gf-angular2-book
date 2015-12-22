@@ -13,3 +13,7 @@
 MVVM(Model-View-ViewModel)这个概念最早是在2005年由微软提出的，相对于1979年提出的MVC(Model-View-Controller)架构来说，还是比较新颖的。
 
 MVVM最主要的特点是双向绑定技术，View层与ViewModel层是相互关联、自动变化的，ViewModel层同时又与Model层是相互通信、自动变化的，从而可以实现了Model和View的真正解耦，代码量也减少了很多。凡是能提升生产力的模式自然是会被提倡与实现的，而实现MVVM这个框架理念的技术有很多种，关键是要实现ViewModel层与其他层的双向绑定，以Knockout.js，Vue.js等框架均采用的Object.defineProperty来设置getter/setter,采用这种做法要比Angular 1.x使用的Dirty check的性能高。但Object.defineProperty使用的是ES5的技术，只能兼容到IE8，要兼容更旧的浏览器只能采用其他手段如用VBScript模拟之类的。
+
+正当MVVM框架大行其道时，Facebook公司也推出React.js，不同于MVVM框架，React.js只是一个相当于View层的库，其数据更新机制来源自游戏开发领域的理念，采用了"整体刷新"的套路，但由于使用了自身的Virtual DOM，避免了直接开销昂贵的DOM操作，加上其高效的DOM Diff算法（将Diff算法复杂度由O(n^3)降低到了O(n)）能精准地对变化的节点进行更新，所以性能非常不错。对于构建程序整体架构设计上，Facebook也提出了Flux的概念。不同于MVC架构，Flux是一个包括了dispatcher、store和views(React components)的单向数据流的架构思想。市场上有很多实现Flux架构的库，其中React Hot Reload 的作者写的Redux尤为出名，采用了大量ES6的新语法，也非常遵循函数式编程的思想。
+
+React社区吸收了很多函数式编程的理念，而函数式编程的一大特点是尽可能减少可变动的部分。过去有人提出Om（用ClojureScript写的React）在速度上比原生js版本的React快了近3倍，震惊了整个社区。究其背后原因，其中一个是ClojureScript使用了immutable 数据，受此启发，React社区也冒出了immutable.js，弥补了js这门弱类型语言对数据对象比较的先天性不足，也更好地提升了性能。
