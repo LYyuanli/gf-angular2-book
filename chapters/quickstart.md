@@ -110,3 +110,51 @@
 >4. 安装相关类库
 >5. 创建工程主要文件
 >6. 浏览器执行
+
+- 创建工程目录
+
+  ```bash
+  mkdir -p angular2-quickstart-ts/app
+  cd    angular2-quickstart-ts
+  ```
+- 创建并编辑package.json文件
+
+  ```javascript
+    {
+      "name": "angular2-quickstart-ts",
+      "version": "1.0.0",
+      "dependencies": {
+        "angular2": "latest",
+        "systemjs": "0.19.6",
+        "es6-promise": "^3.0.2",
+        "es6-shim": "^0.33.3",
+        "reflect-metadata": "0.1.2",
+        "rxjs": "5.0.0-beta.0",
+        "zone.js": "0.5.10"
+      },
+      "devDependencies": {
+        "typescript": "^1.7.3"
+      }
+    }
+
+  ```
+
+- 创建并编辑tsconfig.json文件
+
+```javascript
+    {
+      "compilerOptions": {
+        "target": "ES5",
+        "module": "system",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "removeComments": false,
+        "noImplicitAny": false
+      },
+      "exclude": [
+        "node_modules"
+      ]
+    }
+```
