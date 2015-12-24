@@ -15,7 +15,7 @@
 `MVVM (Model-View-ViewModel)`这个概念最早是在2005年由微软提出的，相对于1979年提出的`MVC (Model-View-Controller)`架构来说，还是比较新颖的。
 MVVM最主要的特点是双向绑定技术，View层与ViewModel层是相互关联、自动变化的，ViewModel层同时又与Model层是相互通信、自动变化的，从而可以实现了Model和View的真正解耦，代码量也减少了很多。凡是能提升生产力的模式自然是会被提倡与实现的。
 
-实现MVVM这个框架理念的技术有很多种，关键是要实现ViewModel层与其他层的双向绑定，以Knockout.js，Vue.js等框架均采用的`Object.defineProperty`来设置getter/setter,采用这种做法要比Angular 1.x使用的Dirty check的性能高（注：Angular 2已去除Dirty check这套技术）。但`Object.defineProperty`使用的是ES5的技术，只能兼容到IE8，要兼容更旧的浏览器只能采用其他手段如用VBScript模拟之类的。在Angular 1.2版本加入了`controllerAs`语法，将controller变成了真正意义上的ViewModel, 这使得Angular成为严格意义上的MVVM框架。
+实现MVVM这个框架理念的技术有很多种，关键是要实现ViewModel层与其他层的双向绑定，以`Knockout.js`，`Vue.js`等框架均采用的`Object.defineProperty`来设置getter/setter,采用这种做法要比Angular 1.x使用的Dirty check的性能高（注：Angular 2已去除Dirty check这套技术）。但`Object.defineProperty`使用的是ES5的技术，只能兼容到IE8，要兼容更旧的浏览器只能采用其他手段如用VBScript模拟之类的。在Angular 1.2版本加入了`controllerAs`语法，将controller变成了真正意义上的ViewModel, 这使得Angular成为严格意义上的MVVM框架。
 
 正当MVVM框架大行其道时，Facebook公司也推出`React.js`，不同于MVVM框架，React.js只是一个相当于View层的库，其数据更新机制来源自游戏开发领域的理念，采用了"整体刷新"的套路，但由于使用了自身的`Virtual DOM`，避免了开销昂贵的DOM操作，加上其高效的DOM Diff算法（将Diff算法复杂度由O(n^3)降低到了O(n)）能精准地对变化的节点进行更新，所以性能还是非常不错。
 
@@ -25,4 +25,6 @@ React社区吸收了很多函数式编程的理念，而函数式编程的一大
 
 在前端界其他社区如火如荼的高速发展的同时，Angular却面对着臃肿的架构、性能的问题等沉重的历史包袱，在Google接手Angular后，组建的新团队也做出了重写Angular的决定，并在2015年3月推出了Angular 2的预览版。
 
-Angular 2.0走的是完全颠覆1.x版的激进路线，以组件化的理念全面拥抱移动端， 在基于ECMAScript 2015的大背景下，吸收其他社区如Flux的单向数据流，Immutable Data等优点,，遵循性能至上的原则进行设计。以此同时Angular团队也宣布放弃自家研发的AtScript,结合微软团队的TypeScript进行开发。加入了这么多新元素，Angular 2即将掀起下一波前端的大浪潮。
+Angular 2走的是完全颠覆1.x版的激进路线，以组件化的理念全面拥抱移动端， 在基于ECMAScript 2015的大背景下，吸收其他社区如Flux的单向数据流，Immutable Data等优点,，遵循性能至上的原则进行设计。以此同时Angular团队也宣布放弃自家研发的AtScript,结合微软团队的TypeScript进行开发。
+
+加入了这么多新元素，Angular 2即将掀起下一波前端的大浪潮。
