@@ -25,6 +25,6 @@ React社区吸收了很多函数式编程的理念，而函数式编程的一大
 
 在前端界其他社区如火如荼的高速发展的同时，Angular却面对着臃肿的架构、性能的问题等沉重的历史包袱，在Google接手Angular后，组建的新团队也做出了重写Angular的决定，并在2015年3月推出了Angular 2的预览版。
 
-Angular 2走的是完全颠覆1.x版的激进路线，以组件化的理念全面拥抱移动端， 在基于ECMAScript 2015的大背景下，吸收其他社区如Flux的单向数据流，Immutable Data等优点,，遵循性能至上的原则进行设计。以此同时Angular团队也宣布放弃自家研发的AtScript,结合微软团队的TypeScript进行开发。
+Angular 2走的是完全颠覆1.x版的激进路线，以组件化的理念全面拥抱移动端， 在基于ECMAScript 2015的大背景下，吸收其他社区如Flux的单向数据流，Immutable Data等优点,，遵循性能至上的原则进行设计。
 
-加入了这么多新元素，Angular 2即将掀起下一波前端的大浪潮。
+Angular团队也放弃自家研发的AtScript,使用微软团队的TypeScript进行主要的开发工作。加入了这么多新元素，Angular 2即将掀起下一波前端的大浪潮。
