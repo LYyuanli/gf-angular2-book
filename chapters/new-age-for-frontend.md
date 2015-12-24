@@ -1,5 +1,5 @@
 
-2015年6月17日，`ECMAScript 2015` (又名ES6) 正式发布，这是JavaScript语言的一次重大的革新，也意味着前端界即将迎来一个崭新的时代。
+2015年6月17日，`ECMAScript 2015`（又名`ES6`）正式发布，这是JavaScript语言的一次重大的革新，也意味着前端界即将迎来一个崭新的时代。
 
 在早些年间，以`jQuery`为代表的DOM操作库曾经给前端界带来过一轮技术革新。`jQuery`以巧妙的封装，链式的调用和清晰的接口使用，大大提升了前端开发的生产力，也降低了前端的入门门槛。在一段时间里很多前端工程师招聘要求里都提及到需要熟悉(精通)jQuery，可见其使用的广泛性与重要性。
 
@@ -19,9 +19,9 @@ MVVM最主要的特点是双向绑定技术，View层与ViewModel层是相互关
 
 正当MVVM框架大行其道时，Facebook公司也推出`React.js`，不同于MVVM框架，React.js只是一个相当于View层的库，其数据更新机制来源自游戏开发领域的理念，采用了"整体刷新"的套路，但由于使用了自身的`Virtual DOM`，避免了开销昂贵的DOM操作，加上其高效的DOM Diff算法（将Diff算法复杂度由O(n^3)降低到了O(n)）能精准地对变化的节点进行更新，所以性能还是非常不错。
 
-对于构建程序的架构设计上，Facebook也提出了`Flux`的概念。不同于MVC架构，Flux是一个包括了dispatcher、store和views(React components)的单向数据流的架构思想。市场上有很多实现Flux架构的库，其中以`React Hot Reload` 的作者写的`Redux`尤为出名，`Redux`采用了大量ES6的新语法，同时也非常遵循函数式编程的思想。
+对于构建程序的架构设计上，Facebook也提出了`Flux`的概念。不同于`MVC`架构，`Flux`是一个包括了dispatcher、store和views(React components)的单向数据流的架构思想。市场上有很多实现Flux架构的库，其中以`React Hot Reload` 的作者写的`Redux`尤为出名，`Redux`采用了大量ES6的新语法，同时也非常遵循函数式编程的思想。
 
-React社区吸收了很多函数式编程的理念，而函数式编程的一大特点是尽可能减少可变动的部分。过去有人提出Om（用ClojureScript写的React）在速度上比原生js版本的React快了近3倍，震惊了整个社区。究其背后原因，其中一个是ClojureScript使用了immutable 数据，受此启发，React社区也冒出了immutable.js，弥补了js这门弱类型语言对数据对象比较的先天性不足，也更好地提升了性能。
+React社区吸收了很多函数式编程的理念，而函数式编程的一大特点是尽可能减少可变动的部分。过去有人提出`Om`（用`ClojureScript`写的React）在速度上比原生js版本的React快了近3倍，震惊了整个社区。究其背后原因，其中一个是ClojureScript使用了Immutable Data，受此启发，React社区也冒出了`immutable.js`，弥补了js这门弱类型语言对数据对象比较的先天性不足，也更好地提升了性能。
 
 在前端界其他社区如火如荼的高速发展的同时，Angular却面对着臃肿的架构、性能的问题等沉重的历史包袱，在Google接手Angular后，组建的新团队也做出了重写Angular的决定，并在2015年3月推出了Angular 2的预览版。
 
