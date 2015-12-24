@@ -4,9 +4,9 @@
 在早些年间，以jQuery为代表的DOM操作库曾经给前端界带来过一轮技术革新。jQuery以巧妙的封装，链式的调用和清晰的接口使用，大大提升了前端开发的生产力，也降低了前端的入门门槛。在一段时间里很多前端工程师招聘要求里都提及到需要熟悉(精通)jQuery，可见其使用的广泛性与重要性。
 
 近几年来，前端界可谓是百家争鸣，日益兴旺。jQuery一统前端的时代也已一去不复还，在与各端和各技术栈的融合中，前端工程师们创造出了很多新奇而又具颠覆性的新东西出来。
- - 使用Node.js，前端工程师可以进行服务端开发；
- - 使用React Native、Ionic，前端工程师可以进行移动APP开发；
- - 使用nw.js、Electron，前端工程师可以进行桌面应用开发。
+ - 使用`Node.js`，前端工程师可以进行服务端开发；
+ - 使用`React Native、Ionic`，前端工程师可以进行移动APP开发；
+ - 使用`nw.js、Electron`，前端工程师可以进行桌面应用开发。
  
 还有很多好玩、实用的框架与库，这些都让前端越发绽放光彩，也让前端工程师成为市场上炙手可热的抢手岗位。
 
@@ -15,7 +15,7 @@
 MVVM(Model-View-ViewModel)这个概念最早是在2005年由微软提出的，相对于1979年提出的MVC(Model-View-Controller)架构来说，还是比较新颖的。
 MVVM最主要的特点是双向绑定技术，View层与ViewModel层是相互关联、自动变化的，ViewModel层同时又与Model层是相互通信、自动变化的，从而可以实现了Model和View的真正解耦，代码量也减少了很多。凡是能提升生产力的模式自然是会被提倡与实现的。
 
-实现MVVM这个框架理念的技术有很多种，关键是要实现ViewModel层与其他层的双向绑定，以Knockout.js，Vue.js等框架均采用的Object.defineProperty来设置getter/setter,采用这种做法要比Angular 1.x使用的Dirty check的性能高（注：Angular 2已不再使用Dirty check这套技术）。但Object.defineProperty使用的是ES5的技术，只能兼容到IE8，要兼容更旧的浏览器只能采用其他手段如用VBScript模拟之类的。
+实现MVVM这个框架理念的技术有很多种，关键是要实现ViewModel层与其他层的双向绑定，以Knockout.js，Vue.js等框架均采用的`Object.defineProperty`来设置getter/setter,采用这种做法要比Angular 1.x使用的Dirty check的性能高（注：Angular 2已去除Dirty check这套技术）。但`Object.defineProperty`使用的是ES5的技术，只能兼容到IE8，要兼容更旧的浏览器只能采用其他手段如用VBScript模拟之类的。在Angular 1.2版本加入了`controllerAs`语法，将controller变成了真正意义上的ViewModel, 这使得Angular成为严格意义上的MVVM框架。
 
 正当MVVM框架大行其道时，Facebook公司也推出React.js，不同于MVVM框架，React.js只是一个相当于View层的库，其数据更新机制来源自游戏开发领域的理念，采用了"整体刷新"的套路，但由于使用了自身的Virtual DOM，避免了开销昂贵的DOM操作，加上其高效的DOM Diff算法（将Diff算法复杂度由O(n^3)降低到了O(n)）能精准地对变化的节点进行更新，所以性能还是非常不错。
 
