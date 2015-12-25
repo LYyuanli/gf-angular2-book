@@ -21,10 +21,10 @@ MVVM最主要的特点是双向绑定技术，View层与ViewModel层是相互关
 
 对于构建程序的架构设计上，Facebook也提出了`Flux`的概念。不同于`MVC`架构，`Flux`是一个包括了dispatcher、store和views(React components)的单向数据流的架构思想。市场上有很多实现Flux架构的库，其中以`React Hot Reload` 的作者写的`Redux`尤为出名，`Redux`采用了大量ES6的新语法，同时也非常遵循函数式编程的思想。
 
-React社区吸收了很多函数式编程的理念，而函数式编程的一大特点是尽可能减少可变动的部分。过去有人提出`Om`（用`ClojureScript`写的React）在速度上比原生js版本的React快了近3倍，震惊了整个社区。究其背后原因，其中一个是ClojureScript使用了Immutable Data，受此启发，React社区也冒出了`immutable.js`，弥补了js这门弱类型语言对数据对象比较的先天性不足，也更好地提升了性能。
+React社区吸收了很多函数式编程的理念，而函数式编程的一大特点是尽可能减少可变动的部分。过去有人提出`Om`（用`ClojureScript`写的React）在速度上比原生js版本的React快了近3倍，震惊了整个社区。究其背后原因，其中一个是`ClojureScript`使用了Immutable Data，受此启发，React社区也冒出了`immutable.js`，弥补了js这门弱类型语言对数据对象比较的先天性不足，也更好地提升了性能。
 
-在前端界其他社区如火如荼的高速发展的同时，Angular却面对着臃肿的架构、性能的问题等沉重的历史包袱，在Google接手Angular后，组建的新团队也做出了重写Angular的决定，并在2015年3月推出了Angular 2的预览版。
+在其他前端社区高速发展的时候，Angular正面临着臃肿的架构、低效的代码等沉重的历史包袱。在Angular被Google接手后，以Google员工组建的新团队对Angular现状进行了分析，做出了重写Angular的决定，并在2015年3月推出了Angular 2的预览版。
 
-Angular 2走的是完全颠覆1.x版的激进路线，以组件化的理念全面拥抱移动端， 在基于ECMAScript 2015的大背景下，吸收其他社区如Flux的单向数据流，Immutable Data等优点,，遵循性能至上的原则进行设计。
+Angular 2走的是完全颠覆1.x版的激进路线，以组件化的理念全面拥抱移动端，在基于ECMAScript 2015的大背景下，吸收其他社区的精华如Flux的单向数据流，Immutable Data等等,，又遵循性能至上的原则进行设计。
 
-Angular团队也放弃自家研发的AtScript,使用微软团队的TypeScript进行主要的开发工作。加入了这么多新元素，Angular 2即将掀起下一波前端的大浪潮。
+同时Angular团队也放弃自家研发的AtScript,使用微软团队的TypeScript进行主要的开发工作。也在2015年12月推出了Angular 2 的beta版本。加入了这么多新元素，可以预见Angular 2又将掀起新一波前端的大浪潮。
