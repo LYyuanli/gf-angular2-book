@@ -21,7 +21,7 @@ MVVM最主要的特点是双向绑定技术，View层与ViewModel层是相互关
 
 对于构建程序的架构设计上，Facebook也提出了`Flux`的概念。不同于`MVC`架构，`Flux`是一个包括了dispatcher、store和views(React components)的单向数据流的架构思想。市场上有很多实现Flux架构的库，其中以`React Hot Reload` 的作者写的`Redux`尤为出名，`Redux`采用了大量ES6的新语法，同时也非常遵循函数式编程的思想。
 
-React社区吸收了很多函数式编程的理念，而函数式编程的一大特点是尽可能减少可变动的部分。过去有人提出`Om`（用`ClojureScript`写的React）在速度上比原生js版本的React快了近3倍，震惊了整个社区。究其背后原因，其中一个是`ClojureScript`使用了Immutable Data，受此启发，React社区也冒出了`immutable.js`，弥补了js这门弱类型语言对数据对象比较的先天性不足，也更好地提升了性能。
+React社区吸收了很多函数式编程的理念，而函数式编程的一大特点是尽可能减少可变动的部分。过去有人提出 `Om`（用ClojureScript写的React）在速度上比原生js版本的React快了近3倍，震惊了整个社区。究其背后原因，其中一个是`ClojureScript`使用了Immutable Data，受此启发，React社区也冒出了`immutable.js`，弥补了js这门弱类型语言对数据对象比较的先天性不足，也更好地提升了性能。
 
 在其他前端社区高速发展的时候，Angular正面临着臃肿的架构、低效的代码等沉重的历史包袱。在Angular被Google接手后，以Google员工组建的新团队对Angular现状进行了分析，做出了重写Angular的决定，并在2015年3月推出了Angular 2的预览版。
 
