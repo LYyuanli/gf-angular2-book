@@ -31,7 +31,7 @@
   npm init
   ```
 
-  安装最新版Angular 2，目前最新版本号是2.0.0-alpha.48
+  安装最新版Angular 2
 
   ```bash
   npm install angular2@latest --save
