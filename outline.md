@@ -99,7 +99,6 @@
       - 驼峰命名还是烤肉串命名
   2. template
     - 如何引用成员类的变量及函数
-    - ng-content ( projection / slot )
     - 如果想将默认外链，可通过templateUrl指定路径
     - 详情引导至第三章
 
