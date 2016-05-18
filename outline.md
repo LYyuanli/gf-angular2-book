@@ -207,7 +207,7 @@
 - 列举关键知识点
 
 ### 3 模板
-- overview
+- overview todo...
 
 #### 3.1 插值(Interpolation)  简单的代码示例展示插值的实现方式，顺带提一下插值中表达式和如何运用宿主组件中的函数，以此来引出下面两小节
 
@@ -268,34 +268,39 @@
 - 3.4.5 NgFor
     - 在模板中NgFor如何使用，说明白指令是如何循环的，对NgFor中的模板变量捎带讲一下，特别地讲解它的索引-index
 
-#### 3.5 * and `<template>`
+#### 3.5 局部模板变量（Template reference variables）
+##### 3.5.1 作用域
+##### 3.5.2 NgForm和模板局部变量  主要是如何运用
 
-#### 3.6 局部模板变量（Template reference variables）
-##### 3.6.1 作用域
-##### 3.6.2 NgForm和模板局部变量
+#### 3.6 输入和输出属性（Input and output properties）从下面两方面介绍
+- 什么是输入输出属性 ？
+- 输入输出属性的别名
 
-#### 3.7 输入和输出属性（Input and output properties）
+#### 3.7 表单
+- overview 直接用模板章节中的概述即可
 
-#### 3.8 表单
-##### 3.8.1 Template-Driven Forms
-##### 3.8.2 表单指令
+##### 3.7.1 Template-Driven Forms 讲述表单组件类和表单模板
+##### 3.7.2 表单指令
 >
-##### NgForm
-##### NgControl - Track change-state & validity
-##### NgModel - Two-way data binding with ngModel
+##### NgForm - 指令依赖声明 & 局部变量
+##### NgControl - 从NgControl的运用来讲 包括Track change-state & validity
+##### NgModel - NgModel的运用、NgModel双向绑定原理【TODO ？？】 
 ##### NgSumit
 
-##### 3.8.3 Add Custom CSS for Visual Feedback
+##### 3.7.3 Add Custom CSS for Visual Feedback
 >
 ##### ng-touched
 ##### ng-dirty
 ##### ng-valid
 
-##### 3.8.4 表单验证（Validation） -  more...such as custom validator
+##### 3.7.4 表单验证（Validation） -  more...such as custom validator
 
-#### 3.9 管道（pipes）
-##### 3.9.1 管道的用法 - eg.Parameterizing a Pipe & Chaining pipes
-##### 3.9.2 管道的内置方法
+#### 3.8 管道（pipes）
+
+- overview 讲解什么是管道，管道的应用场景即可
+
+##### 3.8.1 管道的用法 - eg.Parameterizing a Pipe & Chaining pipes
+##### 3.8.2 管道的内置方法 管道的内置方法怎么使用，列举一下的内置指令
 >
 ##### DatePipe
 ##### JsonPipe
@@ -305,20 +310,22 @@
 ###### PercentPipe
 ##### SlicePipe
 
-##### 3.9.3 自定义管道(Custom Pipes)
-##### 3.9.4 管道状态(官网貌似没了管道的状态...)
->
-##### 无状态的管道
-##### 有状态的管道
-##### 管道无状态和有状态的区别
+##### 3.8.3 自定义管道(Custom Pipes)
+- 声明元数据
+- 实现transform方法
 
-##### 3.9.5 Pure and Impure Pipes 【新增...】
+##### 3.8.4 管道状态
+- 无状态的管道
+- 有状态的管道
+- 管道无状态和有状态的区别
 
-#### 3.10 Template expression operators
-##### 3.10.1 pipe操作符（|）
-##### 3.10.2 Elvis操作符(?.)
+#### 3.9 模板操作符（Template expression operators）
+##### 3.9.1 pipe操作符（|）
+##### 3.9.2 Elvis操作符(?.)
 
-#### 3.11 Summary
+#### 3.10 Summary
+- todo
+
 
 
 ### 4. 指令（8k字）
@@ -370,7 +377,7 @@
 - 列举关键知识点
 
 
-### 5.服务（10000字）
+### 5.服务
 
 #### 5.1 服务介绍
 
@@ -384,7 +391,6 @@
 - 对比NG2跟NG1关于service的区别：  
                 NG1：factory，service，provider                         
                 NG2：class  
-
 #### 5.2 Http  
 
 ##### 5.2.1 Http client介绍 （1000字内）  
@@ -439,7 +445,7 @@ http://www.tutorialspoint.com/angularjs/angularjs_services.htm
 http://reactivex.io/rxjs/  
 
 
-### 6 依赖注入(7000字)  
+### 6 依赖注入  
 
 #### 6.1 什么是依赖注入  
 - 阐述软件设计中依赖注入这种设计模式  
