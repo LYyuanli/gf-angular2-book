@@ -85,6 +85,53 @@
         https://docs.angularjs.org/guide/services   
         http://www.tutorialspoint.com/angularjs/angularjs_services.htm  
         http://reactivex.io/rxjs/  
+6 依赖注入  
+	6.1 什么是依赖注入  
+			- 阐述软件设计中依赖注入这种设计模式  
+			- 大型OO框架必备，面向接口编程  
+			- 解耦，工厂模式的升华  
+	6.2 Angular2中的依赖注入   
+		6.2.1 为什么需要依赖注入  
+			- angular的最大亮点  
+			- 组件（服务）间很方便相互调用  
+			- 方便单元测试编写  
+			- 结合通讯录的产品设计一个例子，一步一步解释依赖注入以及介绍必要性（目前的版本已经不错，改造为统一的通讯录例子即可）  
+		6.2.2 Angular2跟Angular1依赖注入对比  
+			- Angualr1中依赖注入存在问题  
+				- Internal Cache(内建缓存)：依赖一般是被当做单例对待，任何一个服务在整个应用的生命周期中都应该只被创建一次。
+				- Synchronous by default(默认异步)：Angular 1中的服务创建不是异步创建的。
+				- Namespace collision(命名空间冲突)：在应用的生命周期中某个”type”的token是唯一的，如果我们自定义了一个名为Car的服务，而引入的第三方框架中也存在着同名的Car的服务，那么整个系统就会存在问题  
+				- Built into the framework(框架内建)：Angular 1的依赖注入是内建的，我们无法单独的进行使用。  
+			- Angular2的依赖注入是一个完全的重写，解决了NG1中存在的痛点  
+		 6.2.3 Angular2中依赖注入几个定义  
+			 - Injector(注入器)：Injector就类似于Spring里面的ApplicationContext，提供了一						系列的接口以供依赖实例的创建。  
+			 - Binding(绑定)：Binding的作用在于告诉Injector如何去为某个依赖创建实例。一个					Binding需要映射到一个工厂类型的方法。  
+			 -	Dependence(依赖)：一个Dependence是某个对象被创建的类型。  
+	6.3 Angular2中如何使用依赖注入  
+		6.3.1 组件注入Service：结合通讯录实现一个简单的组件依赖注入demo，参照官网的实现步骤 ![](media/14628038696047/14628070347950.jpg)￼  
+
+		
+		- 结合例子如何注入：通过bootstrap全局注入或在组件中通过provider注入，组件的构造函数可以直接获取singleton实例（angular在看到构造函数的参数时，会去组件的metadata中找prodiver，匹配后初始化一个单一实例，【**这里先不要去讲层级注入，先让读者浅显易懂即可，可以提到后面会讲层级注入**】）  
+		- Angular2的注入实现讲解：![](media/14628038696047/14628081907519.jpg)￼  
+
+		6.3.2 Service注入Service: Service依赖另一个service时候如何实现注入，可参考官网结合通讯录的场景设计一个demo![](media/14628038696047/14628083516263.jpg)￼  
+
+		6.3.3 介绍optional injection：Ng2中如何实现可选的依赖注入  
+	6.4 Provider  
+		6.4.1 什么是provider  
+			- provider提供了一个运行时的注入  
+			- 注入器根据provider初始化实例  
+		6.4.2 provider使得NG2的注入灵活，解耦 ![](media/14628038696047/14628087058882.jpg)￼  
+		6.4.3 介绍几种provider：![](media/14628038696047/14628088565501.jpg)￼  
+		6.4.4 provider声明依赖项：![](media/14628038696047/14628090445630.jpg)￼  
+	6.5 层级注入  
+		 6.5.1 注入树介绍  
+				- 组件树的每个层级都可独立注入，都是单例
+				- 注入的冒泡查找，从当前组件冒泡到bootstrap
+		6.5.2 结合通讯录例子demo  
+				- 在不同层级注入同一个service，证明分别是独立  
+		6.5.3 对比在各层级注入的应用场景  
+				- 在组件，父组件，根组件，bootstrap这几个地方注入的对比  
 ## 第三章 实战
 
 ## 参考资料
