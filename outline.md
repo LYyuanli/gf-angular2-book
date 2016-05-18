@@ -25,7 +25,7 @@
 1. 常规目录部分
 2. 参考资料
 
-## 第一章 Angular2 入门
+## 第一部分 Angular2 入门
 > 章首说明，说明NG2背景
 
 1.1 走进前端新时代  
@@ -37,7 +37,222 @@
 
 > 总结：本章讲述了什么内容，通过本章内容，学习到什么，同时能带出第二章的一些内容前奏
 
-## 第二章 深入理解
+## 第二部分 深入理解
+### 1. 总览
+- 讲解架构图总览图
+  - 从NG2的角度讲解Module，NG2的代码都是以Module为单元构成的
+  - NG2的逻辑基本单元是组件，通过Metadata去自描述，讲述组件的在NG2所处的位置。
+  - 组件需要展示内容，引出模板，通过属性绑定与事件绑定与组件关联。
+  - 模板需要一些独立的UI逻辑单元能复用或扩展，引导出指令。
+  - 组件同样需要一些独立的业务逻辑单元复用或扩展，引导出服务
+  - 这些模块如何粘合到一块，引出NG2依赖注入机制
+- 介绍第二部分的总体内容
+  - 各章节大致内容
+
+### 2. 组件
+引文（为什么以组件为作为第一讲述，从高纬度讲述）
+- 组件是编写App的基本单元
+- 组件组合成App的骨架
+- 引导组件到底是什么东西，它包含什么东西，它是怎么演化过来的。
+
+#### 2.1 组件化的发展
+1. 先从模块化讲起，简述其开发的流程（如AMD，CMD）。
+2. 提出早期模块化的不足（只关注JS部分）。
+3. 当模块内聚了CSS和HTML，形成一个相对独立的逻辑单元时候，这就是组件的雏形。
+4. 为什么需要组件这种内聚JS、CSS和HTML的代码组织形式，这种方式的好处是什么（复用性，提高效率，降低成本等）。
+5. 针对组件标准的空白，W3C推出WebComponent标准，明确界定了组件是什么，包括其构成的4个要素。
+  - 自定义标签
+  - 模板
+  - ShadowDom
+  - 引入机制
+6. WebComponent现阶段支持度不好（NG1没遵循该标准、NG2的实现更贴合标准，由此引出NG2的组件实现）。
+
+> 注：这一节不是重点内容，控制篇幅为1k字
+> 参考文章: 
+> 1. https://github.com/xufei/blog/issues/19
+> 2. http://www.alloyteam.com/2015/11/we-will-be-componentized-web-long-text/
+> 3. http://developer.telerik.com/featured/front-end-application-frameworks-component-architectures/
+> 4. https://css-tricks.com/modular-future-web-components/
+
+#### 2.2 NG2的组件
+引文（讲述NG2与WebComponent的4个要素关系，呼应上一节）
+- 自定义标签（selector）
+- 模板（template）
+- ShadowDom (encapsulation)
+- 引入机制 (说明跟模块ES6 Module的关系)
+
+##### 2.2.1 组件基本构成
+- 抽取通讯录里的某一个简单的组件例子（连带bootstrap部分），然后对例子进行剖析
+  - import引入依赖模块
+  - @Component修饰器，简述概念原理（下一节MetaData详解里面的具体内容）
+  - 组件类，封装成员变量，封装组件逻辑
+
+##### 2.2.2 组件功能详解
+- @Component的MetaData成员大家族总览（通过Demo层层深入）
+- 首先从上面的例子，我们已经知道了下面这些组件功能（继续扩展讲述）
+  1. selector
+    - 匹配HTML中的自定义标签
+    - 继续讲解selector的一些注意事项
+      - 省略后变成"div"
+      - 驼峰命名还是烤肉串命名
+  2. template
+    - 如何引用成员类的变量及函数
+    - ng-content ( projection / slot )
+    - 如果想将默认外链，可通过templateUrl指定路径
+    - 详情引导至第三章
+
+- 继续扩展组件功能（Demo功能层层丰富）
+  1. 响应用户输入
+    - 组件需要根据用户输入做出不同的处理逻辑，这时候就需要用到Inputs属性
+    - Demo里追加Inputs的逻辑说明
+    - 可以在组件类里的『@Input()』替代（指定名称）
+  2. 除了响应用户输入，通常还需要对外触发一些事件通知外界
+    - 这时候需要用到outpus属性
+    - Demo里追加Outputs的逻辑说明
+    - 可以在组件类里的『@Output()』替代（指定名称）
+    - 简述EventEmitter的作用
+  3. 维护组件的样式
+    - 组件需要指定样式时可通过styleUrls & styles设置
+    - 与sass等预处理如何协作
+  4. 引入其他依赖组件（引导至注入章节详解，本章不展开）
+    - directives可引入其他依赖的组件以及指令，只对引入组件列举简单的使用例子说明，directive放到第四章再讲述
+    - pipes可引入管道（引导到模板章节学习）
+    - provider可引入服务等依赖（引导到服务章节说明）
+  5. 组件希望引入用户自定义元素
+    - 可通过ng-content实现
+    - Demo追加ng-content的逻辑详细讲述
+- 组件的其他功能讲述（不常用的，为了内容完整度，都说明一下）
+  - host
+  - viewProviders（跟『ng-content』结合一起）
+  - exportAs
+  - queries
+  - moduleId 
+  - encapsulation (shadow dom)
+  - changeDetection（简单讲解用法，后面详解，结合input，output引出后面的交互和变化检测等进阶内容）
+
+> 参考
+> 1. 官网的例子
+> 2. 老外的一些实践文章
+
+#### 2.3 组件交互
+引文：
+- 简单介绍组件交互是什么？
+- 介绍组件的组织形态组件树的概念（Root Component，Parent Component，Child Component）
+
+##### 2.3.1 父组件向子组件传送数据
+- 通过input的简单例子入门讲解
+- 利用input的setter和getter属性做拦截
+- 实时监听数据变换（ngOnChanges，2.5节详解原理）
+
+##### 2.3.2 子组件向父组件传送数据
+- 通过output的简单属性入门讲解
+- 通过local variable调用子组件的成员函数
+- 使用viewChild获取子组件的引用
+
+### 2.3.3 通过Service相互通信(废弃，放在服务章节讲)
+
+#### 2.4 变动监测机制
+引文：
+- 介绍变动监测机制是什么
+- 各种ChangeDetectionStrategy的区别（呼应2.3节）
+
+##### 2.4.1 引起变动的来源
+- 事件（click，touch）
+- XHR（fetch data）
+- Timers（setTimeout, setInterval）
+
+##### 2.4.2 变动通知机制
+- 介绍zone原理
+
+##### 2.4.3 变动响应处理
+- 2.4小节已描述过，这里简单带过即可
+- 组件树自顶向下对变动事件的传递
+- 单个组件内的处理流程
+
+##### 2.4.4 性能分析
+- 使用immutable机制提升响应精准度，减少触发次数
+- 根据组件场景选择不同的ChangeDetectionStrategy可提升性能。
+- 手动改变ChangeDetection的状态（使用ChangeDetectorRef）
+
+> 参考点
+> - http://blog.thoughtram.io/angular/2016/02/22/angular-2-change-detection-explained.html
+
+#### 2.5 生命周期
+引文
+- 生命周期是什么
+- 为什么需要生命周期
+
+##### 2.5.1 生命周期的勾子（按触发顺序讲述）
+- ngOnChanges（Angular设置数据绑定输入属性后的响应）
+- ngOnInit（在Angular初始化数据绑定输入属性之后初始化组件/指令）
+  - 跟constructor区别
+- ngDoCheck（每次Angular变化检测时，跟ngOnChanges关系，触发时机的注意事项）
+- ngAfterContentInit（在Angular将外部内容放到视图内之后）
+- ngAfterContentChecked（在Angular检测放到视图内的外部内容的绑定后）
+- ngAfterViewInit（在Angular创建了组件视图之后）
+- ngAfterViewChecked（在Angular检测了组件视图的绑定之后）
+- ngOnDestroy（在Angular销毁组件/指令之前的清理工作）
+
+##### 2.5.2 路由勾子
+- canActivate
+- onActivate
+- canDeactivate
+
+#### 本章总结
+- 完整Demo例子
+- 回顾本章中心内容
+- 列举关键知识点
+
+### 4. 指令（8k字）
+引文：
+- 呼应组件章节，指令和组件实际上有点相似的，区别在哪里呢？，由此引入本章内容
+
+#### 4.1 指令概述
+- 指令的概念
+- 指令的作用，逻辑复用
+
+##### 4.1.1 指令分类
+- 属性指令及其定义（列举对应内置指令，如NgStyle，NgClass）
+- 结构指令及其定义（列举对应内置指令，如NgIf，NgFor）
+- 组件
+  - 呼应组件章节
+  - 二者的区别是什么（是否带模板）
+  - 前面的组件的特性如一些MetaData，生命周期等都适用于指令
+
+##### 4.1.2 集合指令简述
+- COMMON_DIRECTIVES
+- CORE_DIRECTIVES
+- FORM_DIRECTIVES
+- PLATFORM_DIRECITVES
+- ROUTER_DIRECTIVES
+
+#### 4.2 属性指令
+- 从通讯录quickstart里抽离一个简单的属性指令例子（包括在模板如何引入使用）
+  - 简述@Directive修饰符（与@Component比对）
+  - 简述指令类（跟组件类似）
+  - ElementRef对DOM元素的引用
+- 属性指令继续深入
+  - 获取输入参数（Input）
+    - Demo追加Input逻辑讲解
+  - 响应用户事件（host）
+    - Demo追加host逻辑讲解
+
+#### 4.3 结构指令
+- 从通讯录quickstart里抽离一个简单的结构指令例子（包括在模板如何引入使用）
+  - @Directive和指令类与属性指令相同
+  - 简述TemplateRef和ViewContainerRef作用
+- 结构指令继续深入
+  - 详细介绍『Template』tag机制
+  - 详细介绍"*"的作用
+- 结合上面的解释，分析ngIf原理
+
+#### 本章总结
+- 完整Demo例子
+- 回顾本章中心内容
+- 列举关键知识点
+
+
+
 5. 服务  
       5.1 服务介绍  
               5.1.1 什么是服务  
@@ -85,6 +300,7 @@
         https://docs.angularjs.org/guide/services   
         http://www.tutorialspoint.com/angularjs/angularjs_services.htm  
         http://reactivex.io/rxjs/  
+
 6 依赖注入  
 	6.1 什么是依赖注入  
 			- 阐述软件设计中依赖注入这种设计模式  
@@ -132,7 +348,7 @@
 				- 在不同层级注入同一个service，证明分别是独立  
 		6.5.3 对比在各层级注入的应用场景  
 				- 在组件，父组件，根组件，bootstrap这几个地方注入的对比  
-## 第三章 实战
+## 第三部分 实战
 
 ## 参考资料
 > TODO
