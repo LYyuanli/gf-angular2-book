@@ -217,7 +217,7 @@
     - 与JavaScript表达式类比，列出哪些是不合法的模板表达式
     - 在模板表达式中如何引用成员变量，讲解其作用域范围
     
-- 3.1.2 模板声明（Template statements） 什么鬼 。。。
+- 3.1.2 模板声明（Template statements） 参考初稿对应章节.
 
 #### 3.2 数据绑定（Binding syntax）
 ##### 3.2.1 数据绑定概览
@@ -252,8 +252,16 @@
 - 3.2.3.3 自定义事件
     - 围绕EventEmitter对象展开，包括指令发起自定义事件，讲述该指令如何触发一个事件，结合实例代码给出
 
-#### 3.3 双向绑定 -  two-way data binding, change tracking
-> todo ？？ 
+##### 3.2.4 双向绑定 -  two-way data binding, change tracking
+> todo 需要参考组件部分，避免内容重叠
+
+##### 3.2.5 输入和输出属性（Input and output properties）从下面两方面介绍
+- 什么是输入输出属性 
+- 输入输出属性的别名
+
+#### 3.3 局部模板变量（Template reference variables）
+##### 3.4.1 作用域
+##### 3.4.2 NgForm和模板局部变量  主要是如何运用
 
 #### 3.4 内置指令
 - overview 模板内置指令在Angular中发挥的作用，起到引入的作用.
@@ -268,65 +276,52 @@
 - 3.4.5 NgFor
     - 在模板中NgFor如何使用，说明白指令是如何循环的，对NgFor中的模板变量捎带讲一下，特别地讲解它的索引-index
 
-#### 3.5 局部模板变量（Template reference variables）
-##### 3.5.1 作用域
-##### 3.5.2 NgForm和模板局部变量  主要是如何运用
-
-#### 3.6 输入和输出属性（Input and output properties）从下面两方面介绍
-- 什么是输入输出属性 ？
-- 输入输出属性的别名
-
-#### 3.7 表单
+#### 3.5 表单
 - overview 直接用模板章节中的概述即可
 
-##### 3.7.1 Template-Driven Forms 讲述表单组件类和表单模板
-##### 3.7.2 表单指令
->
-##### NgForm - 指令依赖声明 & 局部变量
-##### NgControl - 从NgControl的运用来讲 包括Track change-state & validity
-##### NgModel - NgModel的运用、NgModel双向绑定原理【TODO ？？】 
-##### NgSumit
+##### 3.5.1 Template-Driven Forms 讲述表单组件类和表单模板
+##### 3.5.2 表单指令
+- NgForm - 指令依赖声明 & 局部变量
+- NgControl - 从NgControl的运用来讲 包括Track change-state & validity
+- NgModel - NgModel的运用、NgModel双向绑定原理【TODO ？？】 
+- NgSumit
 
-##### 3.7.3 Add Custom CSS for Visual Feedback
->
-##### ng-touched
-##### ng-dirty
-##### ng-valid
+##### 3.5.3 用户自定义css （Add Custom CSS for Visual Feedback）
+- ng-touched
+- ng-dirty
+- ng-valid
 
-##### 3.7.4 表单验证（Validation） -  more...such as custom validator
+##### 3.5.4 表单验证（Validation） -  more...such as custom validator
 
-#### 3.8 管道（pipes）
+#### 3.6 管道（pipes）
 
 - overview 讲解什么是管道，管道的应用场景即可
 
-##### 3.8.1 管道的用法 - eg.Parameterizing a Pipe & Chaining pipes
-##### 3.8.2 管道的内置方法 管道的内置方法怎么使用，列举一下的内置指令
->
-##### DatePipe
-##### JsonPipe
-##### UpperCasePipe
-##### LowerCasePipe
-##### CurrencyPipe
-###### PercentPipe
-##### SlicePipe
+##### 3.6.1 管道的用法 - eg.Parameterizing a Pipe & Chaining pipes
+##### 3.6.2 管道的内置方法 管道的内置方法怎么使用，列举一下的内置指令
+- DatePipe
+- JsonPipe
+- UpperCasePipe
+- LowerCasePipe
+- CurrencyPipe
+- PercentPipe
+- SlicePipe
 
-##### 3.8.3 自定义管道(Custom Pipes)
+##### 3.6.3 自定义管道(Custom Pipes)
 - 声明元数据
 - 实现transform方法
 
-##### 3.8.4 管道状态
+##### 3.6.4 管道状态
 - 无状态的管道
 - 有状态的管道
 - 管道无状态和有状态的区别
 
-#### 3.9 模板操作符（Template expression operators）
-##### 3.9.1 pipe操作符（|）
-##### 3.9.2 Elvis操作符(?.)
+#### 3.7 模板操作符（Template expression operators）
+##### 3.7.1 pipe操作符（|）
+##### 3.7.2 Elvis操作符(?.)
 
-#### 3.10 Summary
+#### 3.8 Summary
 - todo
-
-
 
 ### 4. 指令（8k字）
 引文：
