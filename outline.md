@@ -68,7 +68,9 @@
 6. WebComponent现阶段支持度不好（NG1没遵循该标准、NG2的实现更贴合标准，由此引出NG2的组件实现）。
 
 > 注：这一节不是重点内容，控制篇幅为1k字
+>
 > 参考文章: 
+> 
 > 1. https://github.com/xufei/blog/issues/19
 > 2. http://www.alloyteam.com/2015/11/we-will-be-componentized-web-long-text/
 > 3. http://developer.telerik.com/featured/front-end-application-frameworks-component-architectures/
@@ -131,7 +133,9 @@
   - changeDetection（简单讲解用法，后面详解，结合input，output引出后面的交互和变化检测等进阶内容）
 
 > 参考
+>
 > 1. 官网的例子
+>
 > 2. 老外的一些实践文章
 
 #### 2.3 组件交互
@@ -242,7 +246,7 @@
   - @Directive和指令类与属性指令相同
   - 简述TemplateRef和ViewContainerRef作用
 - 结构指令继续深入
-  - 详细介绍『Template』tag机制
+  - 详细介绍"Template"标签机制
   - 详细介绍"*"的作用
 - 结合上面的解释，分析ngIf原理
 
@@ -253,7 +257,7 @@
 
 
 
-5. 服务  
+### 5. 服务  
       5.1 服务介绍  
               5.1.1 什么是服务  
                   - 简单描述什么是服务，服务在系统中的作用：服务为系统提供了基础功能，通过独立的接口跟功能给外部调用  
