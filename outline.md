@@ -561,8 +561,7 @@ http://reactivex.io/rxjs/
 #### 8.1 Overview
 - 交待需要测试的背景，对angular当前的测试技术做个预览或者对比
 - 阐述测试技术及其实践的必要性
-- 常用的测试技术有哪些？ -unit test & e2e test
-    - unit test&e2e test的基本概述、responsibility、介绍技术流、使用的场景
+- 常用的测试技术有哪些？
 
 #### 8.2 Unit testing - Jasmine & Karma
 ##### 8.2.1 单元测试
