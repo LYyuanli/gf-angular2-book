@@ -391,6 +391,7 @@
 - 对比NG2跟NG1关于service的区别：  
                 NG1：factory，service，provider                         
                 NG2：class  
+
 #### 5.2 Http  
 
 ##### 5.2.1 Http client介绍 （1000字内）  
