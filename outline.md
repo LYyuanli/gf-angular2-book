@@ -370,7 +370,7 @@
 - 列举关键知识点
 
 
-### 5.服务
+### 5.服务（10000字）
 
 #### 5.1 服务介绍
 
@@ -384,6 +384,7 @@
 - 对比NG2跟NG1关于service的区别：  
                 NG1：factory，service，provider                         
                 NG2：class  
+
 #### 5.2 Http  
 
 ##### 5.2.1 Http client介绍 （1000字内）  
@@ -438,7 +439,7 @@ http://www.tutorialspoint.com/angularjs/angularjs_services.htm
 http://reactivex.io/rxjs/  
 
 
-### 6 依赖注入  
+### 6 依赖注入(7000字)  
 
 #### 6.1 什么是依赖注入  
 - 阐述软件设计中依赖注入这种设计模式  
