@@ -553,40 +553,45 @@ http://reactivex.io/rxjs/
 #### 7.3 Summary
 
 
-### 8 测试
+### 8 测试 4-5千字
 #### 8.1 Overview
 - 交待需要测试的背景，对angular当前的测试技术做个预览或者对比
 - 阐述测试技术及其实践的必要性
-- 常用的测试技术有哪些？
+- 常用的测试技术有哪些？ -unit test & e2e test
+    - unit test&e2e test的基本概述、responsibility、介绍技术流、使用的场景
 
-#### 8.2 Unit testing - Jasmine & Karma
+#### 8.2 Unit testing
 ##### 8.2.1 单元测试
 - 介绍什么是单元测试 what？
 - 单元测试引用场景，剖析单元测试要解决什么问题 why？
-- 常用的单元测试方案或者技术简介 What testing framework should I use?
+- 常用的单元测试方案及技术简介 What testing framework should I use?
 
 ##### 8.2.2 单元测试技术选型  本节预选Jasmine & Karma作为unit test的技术支持，需要从下面几方面来介绍
 - Karma简介
-- Jasmine简介及Jasmine常用api 主要介绍describe，it语法，结合几个简单的例子介绍一下Expectations如toBe、toEqual等
-- 介绍karma+jasmine的配置
+- Jasmine简介及Jasmine常用api 主要介绍describe，it语法，结合几个简单的例子介绍一下beforeEach、Expectations如toBe、toEqual等
 
 ##### 8.2.3 一个基于karma+Jasmine的单元测试例子
-- 所需的依赖、环境配置搭建等
+- 介绍karma+jasmine的配置
+    - 所需的依赖（Installation)
+    - 环境配置搭建等（Configuration,如：karma.conf.js）
 - 如何写测试用例，具体可参考官网
-- basic Jasmine testing skills 分别给出Testing a Controller、Testing Filters、Testing Directives、Testing Promises的例子
+- 编写测试例子 需要覆盖Testing a Controller、Testing Filters、Testing Directives、Testing Promises的例子
 
-##### 8.2.4 编写第一个typeScript测试
-- 讲述需要准备的依赖环境及如何配置
-- 准备好typeScript，如tsconfig.json
-- 从我们的快速入门中挑选demo来编写测试用例，需要涵盖 component test、Asynchronous Service
+##### 8.2.4 编写第一个typeScript测试 
+- 搭建所需的依赖 Dependencies & Installing
+- 准备好typeScript Configuration 如tsconfig.json
+- 从quickStart中挑选demo来编写测试用例，需要涵盖 component test、Asynchronous Service
 - 导入测试模块
 - 运行测试代码
-- 如何调试测试，可从具体的一写tips写起
+- 如何Debug测试 可从具体的一写tips写起
 
 可参考：
+- http://karma-runner.github.io/0.12/intro/installation.html
+- https://github.com/karma-runner/karma-jasmine
 - https://blog.logentries.com/2015/01/unit-testing-with-karma-and-jasmine-for-angularjs/
 - http://jasmine.github.io/edge/introduction.html
 - https://docs.angularjs.org/guide/unit-testing
+- https://github.com/AngularClass/angular2-webpack-starter
 
 #### 8.3 e2e test（简单介绍即可）
 - e2e test简介
@@ -595,6 +600,9 @@ http://reactivex.io/rxjs/
 - 相关总结
 
 #### 8.4 Summary
+- 回顾本章核心内容
+- 罗列本节关键知识点
+- 为第三部分做个引出
 
 
 ## 第三章 实战
