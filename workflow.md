@@ -27,7 +27,7 @@
 ![](_images/14631036985841.jpg)
 
 
-- [+] 新的内容大纲contents.md
+- [+] 新的内容大纲 outline.md
 - [+] 写作规范和指导见writing-guide.md
 - [+] 写书过程的流程框架见workflow.md （如工具，代码示例等
 - [+] 把每次的迭代每周reversion changelog更新
