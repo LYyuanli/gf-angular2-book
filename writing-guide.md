@@ -1,12 +1,14 @@
 # 书籍周边
 
-## 1. 编写内容放置
+## 1. 内容周边
+
+## 1.1 编写内容放置
 
 - github地址：https://github.com/gf-rd/gf-angular2-book
 - 章节内容放置在『chapter』文件夹，如第二部分第三章文件名："2.3-模板.md"。
 - 统一用Markdown来书写
 
-### 1.1 图片放置
+### 1.2 图片放置
 
 图片放置在『_images』文件夹（画图工具可见浪的writing-tools）。
 
@@ -14,7 +16,7 @@
 - https://github.com/(user)/(repo)/raw/master/path/to/image.gif
 - 或者在github上选中图片，点击『raw』能获取到类似于cdn的图片地址
 
-### 1.2 图片与表格注解
+### 1.3 图片与表格注解
 - 图号/表号（按章节编排顺序）
 - 图题/表题（对图片或表格的简单描述）
 
@@ -23,7 +25,7 @@
 
 [alt text](http://imageurl)
 
-图 3-1 NgModel双向绑定效果图"
+图 3-1 NgModel双向绑定效果图
 
 ```
 
@@ -111,7 +113,9 @@
 概括本章讲述的重点，内容点以列表形式给出
 
 格式类似：
+
 本章我们学习了XXX（核心概括），关键点有：
+
 1. 属性绑定
 2. 事件绑定
 2. 表单
@@ -150,7 +154,7 @@
 
 模板主要的形态是HTML，实际上HTML正是Angular模板的默认使用语言，绝大部分的HTML语法在模板中也都是适用的，除了`<script>`标签，`<script>`标签主要是为了防止Javascript脚本注入的可能性...
 
-### 代码块加上PL标识
+### 3.3 代码块加上PL标识
 
 // 不好
 
@@ -172,12 +176,23 @@
     ```
 ```
 
-### 3.3 代码缩进2空格
+### 3.4 代码缩进2空格
+
+```js
+import {Component} from 'angular2/core'
+@Component({
+  selector: 'hero-birthday',
+  template: `<p>The hero's birthday is {{ birthday | date:"MM/dd/yy" }}</p>`
+})
+export class HeroBirthday {
+  birthday = new Date(1988,3,15); // April 15, 1988
+}
+```
 
 更多Style Guide请查看官网
 https://angular.io/docs/ts/latest/guide/style-guide.html
 
-### 3.4 行内代码片段
+### 3.5 行内代码片段
 
 // 不好
 
