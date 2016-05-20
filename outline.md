@@ -440,7 +440,7 @@ $==============================================<br>
 - 列举关键知识点
 
 
-### 5.服务
+### 5.服务 （15%）
 
 #### 5.1 服务介绍
 
@@ -449,22 +449,22 @@ $==============================================<br>
 
 ##### 5.1.2 NG2中的Service（Injectable）  
 - 描述NG2中的服务概念：介绍内置service（http等）跟自定义service（每个class都    可以是一个单例可服用的服务，通过@Injectable()注解标示，component可直接 注入）  
-
-##### 5.1.3 NG2中的service跟NG1中的service   
-- 对比NG2跟NG1关于service的区别：  
-                NG1：factory，service，provider                         
-                NG2：class  
+- service 作为model封装跟后台接口的交互
 
 #### 5.2 Http  
 
-##### 5.2.1 Http client介绍 （1000字内）  
+##### 5.2.1 Http client介绍  
 - 介绍客户端与服务端通讯的方式：XHR，JSONP，Fetch  
 - 介绍NG2中的http服务  
 
 ##### 5.2.1 结合通讯录例子编写用http模块实现的例子 （详细，step by step）  
 - 编写从服务端获取通讯录列表并展示在ui中例子  
 
-###### 5.2.2 Http与observable  
+##### 5.2.2 jsonp  
+- 简单介绍jsonp  
+- 改造通讯录例子，用jsonp方式实现（参照官网即可）  
+
+##### 5.2.3 Http与observable  
 - 带一下NG2中的返回obserable对象  
 
 #### 5.3 响应式编程  //TODO:（可以把第九章的响应式编程搬过去）  
@@ -484,22 +484,19 @@ $==============================================<br>
 
 ##### 5.4.2 rx操作符  
 - 介绍rx操作符的工作流程，结合珠宝图（简单即可，毕竟这不是rxjs的书）  
-- NG2中常用的几种即可，包括map(结合http)，fromevent(用click事件作为例子)  
+- NG2中常用的几种即可，包括map(结合http)，fromevent(用click事件作为例子) 。。。 
 - 普通数据类型跟observable对象的转换：使用from转换，用to还原  
+- observble 与 promise  
+  - promise只是obserable的弱化版，用toPromise(success, fail)可简单实现转化  
+  - 用通讯录例子改造成promise（可参照官网的例子）  
 
 ##### 5.4.3 NG2中rxjs  
 - 描述NG2中如何使用rxjs（rxjs过于庞大，ng2只使用简约版）  
 - 结合通讯录例子中的通讯列表讲解NG2中rxjs，根据官网的例子改造即可  
 
-##### 5.4.4 observble 与 promise  
-- promise只是obserable的弱化版，用toPromise(success, fail)可简单实现转化  
-- 用通讯录例子改造成promise（可参照官网的例子）  
-
-##### 5.4.5 jsonp  
-- 简单介绍jsonp  
-- 改造通讯录例子，用jsonp方式实现（参照官网即可）  
-
 #### 5.5 总结
+- 回顾本章中心内容
+- 列举关键知识点
 
 references：  
 https://angular.io/docs/ts/latest/guide/server-communication.html#!#rxjs  
@@ -509,7 +506,7 @@ http://www.tutorialspoint.com/angularjs/angularjs_services.htm
 http://reactivex.io/rxjs/  
 
 
-### 6 依赖注入  
+### 6 依赖注入  （10%）
 
 #### 6.1 什么是依赖注入  
 - 阐述软件设计中依赖注入这种设计模式  
@@ -524,13 +521,9 @@ http://reactivex.io/rxjs/
 - 方便单元测试编写  
 - 结合通讯录的产品设计一个例子，一步一步解释依赖注入以及介绍必要性（目前的版本已经不错，改造为统一的通讯录例子即可）  
 
-##### 6.2.2 Angular2跟Angular1依赖注入对比  
-- Angualr1中依赖注入存在问题  
+##### 6.2.2 NG2 依赖注入  
 - Internal Cache(内建缓存)：依赖一般是被当做单例对待，任何一个服务在整个应用的生命周期中都应该只被创建一次。
-- Synchronous by default(默认异步)：Angular 1中的服务创建不是异步创建的。
 - Namespace collision(命名空间冲突)：在应用的生命周期中某个”type”的token是唯一的，如果我们自定义了一个名为Car的服务，而引入的第三方框架中也存在着同名的Car的服务，那么整个系统就会存在问题  
-- Built into the framework(框架内建)：Angular 1的依赖注入是内建的，我们无法单独的进行使用。  
-- Angular2的依赖注入是一个完全的重写，解决了NG1中存在的痛点  
 
 ##### 6.2.3 Angular2中依赖注入几个定义  
 - Injector(注入器)：Injector就类似于Spring里面的ApplicationContext，提供了一						系列的接口以供依赖实例的创建。  
@@ -553,11 +546,16 @@ http://reactivex.io/rxjs/
 - provider提供了一个运行时的注入  
 - 注入器根据provider初始化实例  
 
-##### 6.4.2 provider使得NG2的注入灵活，解耦 ![](media/14628038696047/14628087058882.jpg)￼  
+##### 6.4.2 provider的技术表述
+- 使得NG2的注入灵活，解耦
+- 调用跟实现解耦
 
-##### 6.4.3 介绍几种provider：![](media/14628038696047/14628088565501.jpg)￼  
+##### 6.4.3 介绍几种provider：
+- 绑定到值
+- 绑定到别名
+- 绑定到某个工厂方法
 
-##### 6.4.4 provider声明依赖项：![](media/14628038696047/14628090445630.jpg)￼  
+##### 6.4.4 provider声明依赖项
 
 #### 6.5 层级注入  
 
