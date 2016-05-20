@@ -6,30 +6,31 @@
 - 创作阶段（写作工具. markdown，git commit；词汇表，作图，图片，demo.
 - Review阶段（Gitbook，issue提出和管理）
 
-预备阶段解决写什么，写书项目其他人的进展，deadline这些事情
-创造阶段解决怎么写，用什么工具，图表和demo 代码示例怎么处理，一些词汇怎么拿捏的事情
-Review阶段解决其他人如何来帮助你优化文章，借助Review工具来提意见，来整理建议和追踪实施建议。
+
+- 预备阶段解决写什么，写书项目其他人的进展，deadline这些事情
+- 创造阶段解决怎么写，用什么工具，图表和demo 代码示例怎么处理，一些词汇怎么拿捏的事情
+- Review阶段解决其他人如何来帮助你优化文章，借助Review工具来提意见，来整理建议和追踪实施建议。
 
 
 ### 节点人物：
 
 项目经理来督促，对自己负责的章节有很明确的意识，写什么内容，怎么写，这些需要不断和具体的作者来沟通和进度把控。
 
-书籍2、4章（李仲辉）
-书籍3、7、8章（唐明）
-书籍5、6章（张淼）
+- 书籍1、2、4章（李仲辉）
+- 书籍3、7、8章（唐明）
+- 书籍5、6章（张淼）
 
 ### Repo 信息：
 
 ![](_images/14631036985841.jpg)
 
 
-- [+] 提交新的大纲和owner到contents.md
-- [+] 上次商讨的guides 写作规范沉淀到repo中
-- [+] 确定新的workflow.md 等（从awesome-ng2移入）
-- [+] 开始把每次的reversion changelog更新
-- [+] 确定我们的milestone到roadmap中
-- [+] 加入glossary.md 来确定 terminology
+- [+] 新的内容大纲contents.md
+- [+] 写作规范和指导见writing-guide.md
+- [+] 写书过程的流程框架见workflow.md （如工具，代码示例等
+- [+] 把每次的迭代每周reversion changelog更新
+- [+] 我们的milestone到roadmap.md中
+- [+] 加入glossary.md 来确定 专业词汇 terminology
 
 我们希望大家的一些工作都能反馈到 github 这个 repo（如提交文章，改善指南等，我们能够明确的知道大家的这周的工作进展，更新了哪些，提交了哪些，是富有余力还是颇有压力需要支持等。
 
