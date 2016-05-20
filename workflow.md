@@ -3,9 +3,11 @@
 我们是这么看待写书这件事的，有三个阶段：
 
 - 预备阶段（节点人物，awesome-ng2内容支持，repo信息，营造氛围. 
-- 创作阶段（写作工具. markdown，git commit；词汇表，作图，图片，demo.
+- 创作阶段（写作工具. markdown，git commit；词汇表，作图，图片，demo
 - Review阶段（Gitbook，issue提出和管理）
 
+
+各阶段的目的：
 
 - 预备阶段解决写什么，写书项目其他人的进展，deadline这些事情
 - 创造阶段解决怎么写，用什么工具，图表和demo 代码示例怎么处理，一些词汇怎么拿捏的事情
