@@ -109,6 +109,7 @@ slides地址：https://slides.com/lizhonghui/ng2/live
 需要以一段话做章节铺垫，已段落形式，不以列表形式。
 
 作用：
+
 1. 简单带过上一章的中心内容
 2. 为本章描述做开篇引导
 
