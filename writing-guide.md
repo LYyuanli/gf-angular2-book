@@ -1,9 +1,7 @@
 
 slides地址：https://slides.com/lizhonghui/ng2/live
 
-# 书籍周边
-
-## 1. 内容周边
+# 1. 内容周边
 
 ## 1.1 编写内容放置
 
