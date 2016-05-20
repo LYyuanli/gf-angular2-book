@@ -28,12 +28,41 @@
 ## 第一部分 Angular2 入门
 > 章首说明，说明NG2背景
 
-1.1 走进前端新时代  
-> TODO
+#### 1.1 走进前端新时代  
+> 本节体现出前端开发的历史纵深感，沧桑感。最后洋洋大观给出各种新概论
 
-1.2 Angular2 基本概念  
-1.3 TypeScript语言简介  
-1.4 快速上手  
+- 早起页面IE6, java servelet
+- jQuery DOM开发(flash, 等)
+- 后jQuery时代，前MVC时代（Backbone，模块化require.js）
+- MVC时代（knockout, angular, ember，）
+- 新web，新标准（web components, service worker, v8，）
+- 后Web框架（angular2, react v4？, redux, reactive functional programming，等 - 参考[展望 Javascript 2016年的趋势和生态发展 #12](https://github.com/gaohailang/blog/issues/12)）
+
+#### 1.2 Angular2 简介
+
+> 历史
+
+- Angular 起源和历史（MVVM，Google内部）
+- Angular changelog（1.x的版本迭代，如0.8，1.2， 1.4 new rouer, 1.5 migrate ）
+- Angular 2 筹划阶段（如Dart，atScript，和web标准的迎合，和M$的合作TypeScript等）
+- Angular 2 现状和未来展望（ngconf, angular-connect 大会上的新消息和展望roadmap, 如NativeScript，多种render，代码仓库精简化等）
+
+> 特点概述
+
+为什么会有 angular2 应运而生，主要特点（如和1.x的进化，如何从新 react 中借鉴概念等）。如
+
+#### 1.3 TypeScript语言简介
+
+主要介绍和angular 2 珠联璧合的部分（如注解，类型系统，等等）
+同时对于class，module这些重要的es6概念同时也在这章节进行讲诉。
+
+#### 1.4 快速上手
+
+总结：本章讲述了什么内容，通过本章内容，学习到什么，同时能带出第二章的一些内容前奏
+在本章会对我们的 demo（通讯录）的具体产品例子进行讲诉（里面的概念，我们在后续章节逐渐优化补充的功能介绍）
+同时会有快速上手的一步一步的指南，包括主要如何安装一些工具，如何类库依赖，如何把hello world 跑起来。
+最后本章会对使用angular2进行前端开发过程中的工具链进行全局的讲解等。
+
 
 > 总结：本章讲述了什么内容，通过本章内容，学习到什么，同时能带出第二章的一些内容前奏
 
