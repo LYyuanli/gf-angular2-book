@@ -38,32 +38,43 @@
 ## 内容要求
 
 ### 不使用人称视角
+
 // 不好
+
 在模板表达式里，我们是不能引用到任何全局命名空间中的成员
 
 // 好
+
 模板表达式里是不能引用任何全局命令空间中的成员
 
 ### 不要口语化表述
+
 // 不好
+
 1. `[(ngModel)]`会自动地完成了属性绑定和时间绑定，碉堡了有木有。。。
 2. 现在我们知道了DI这种叼炸天的特性。。。
 3. XX亮瞎你的眼睛
 
 // 好
+
 1. `[(ngModel)]`会自动地完成了属性绑定和时间绑定
 2. 现在我们知道依赖注入这个强大的特性
 3. 去掉之
 
 ### 设问句使用？
+
 // 自问自答形式
+
 设置DOM对象的属性值，Angular2推荐使用DOM对象属性绑定，但为啥还会有HTML元素属性绑定呢？原因是...
 
 结论：可以使用
 
 ### 关于demo引用
+
 // 不好
+
 // 不要在使用官网的Hero例子了
+
 ```
     ```html
     <div *ngFor="#hero of heroes">{{hero.fullName}}</div>
@@ -71,8 +82,11 @@
 ```
     
 // 好
+
 // 咱们的通讯录Demo
+
 // https://github.com/gf-rd/ng2-contacts-demo
+
 ```
     ```html
     <li *ngFor="#contact of contacts">
@@ -105,29 +119,39 @@
 ## 格式要求
 
 ### 目录层次
+
 // 不好
+```
 ### 3.2.1 属性绑定
 #### 3.2.1.1 单向数据流
 #### 3.2.1.1.1 第五级标题
+```
 
 // 好
+```
 # 3 模板
 ## 3.2 数据绑定
 ### 3.2.1 属性绑定
 #### 单向数据流
 ##### 第五级标题
+```
 
 层次结构：篇-章-节-小节-小小节
 
 ### 段落开头不需要空两格
+
 // 不好
+
     模板主要的形态是HTML，实际上HTML正是Angular模板的默认使用语言，绝大部分的HTML语法在模板中也都是适用的，除了`<script>`标签，`<script>`标签主要是为了防止Javascript脚本注入的可能性...
 
 // 好
+
 模板主要的形态是HTML，实际上HTML正是Angular模板的默认使用语言，绝大部分的HTML语法在模板中也都是适用的，除了`<script>`标签，`<script>`标签主要是为了防止Javascript脚本注入的可能性...
 
 ### 代码块加上PL标识
+
 // 不好
+
 ```
     ```
     import { Component, Pipe } from "angular2/core";
@@ -137,6 +161,7 @@
 ```
 
 // 好
+
 ```
     ```js
     import { Component, Pipe } from "angular2/core";
@@ -151,10 +176,13 @@
 https://angular.io/docs/ts/latest/guide/style-guide.html
 
 ### 行内代码片段
+
 // 不好
+
 和模板表达式一样，模板声明也不能引用任何全局对象，如window和document，同样也无法调用console.log或是Math.min。
 
 // 好
+
 和模板表达式一样，模板声明也不能引用任何全局对象，如`window`和`document`，同样也无法调用`console.log`或是`Math.min`。
 
 
