@@ -782,45 +782,76 @@ $=================第一，第二作者: 2016-06-24 =================
 > todo
 
 
-### 8 测试 4-5千字
+### 8 测试 7-8千字
+$================= 2016-05-20 =================
+
+第一作者开始写作
+
+$==============================================
 #### 8.1 Overview
 - 交待需要测试的背景，对angular当前的测试技术做个预览或者对比
 - 阐述测试技术及其实践的必要性
 - 常用的测试技术有哪些？ -unit test & e2e test
     - unit test&e2e test的基本概述、responsibility、介绍技术流、使用的场景
+    
+$================= 2016-05-30 =================
+
+交付内容：
+
+  - 学习预研准备工作
+  - 引文初稿
+
+$==============================================
 
 #### 8.2 Unit testing
 ##### 8.2.1 单元测试
 - 介绍什么是单元测试 what？
-- 单元测试引用场景，剖析单元测试要解决什么问题 why？
+- 单元测试应用场景，剖析单元测试要解决什么问题 why？
 - 常用的单元测试方案及技术简介 What testing framework should I use?
 
 ##### 8.2.2 单元测试技术选型  本节预选Jasmine & Karma作为unit test的技术支持，需要从下面几方面来介绍
 - Karma简介
-- Jasmine简介及Jasmine常用api 主要介绍describe，it语法，结合几个简单的例子介绍一下beforeEach、Expectations如toBe、toEqual等
+- Jasmine简介及Jasmine常用api
+    - 主要介绍describe，it语法
+    - 结合几个简单的例子介绍一下beforeEach、Expectations如toBe、toEqual等
+    
+$================= 2016-06-06 =================
 
-##### 8.2.3 一个基于karma+Jasmine的单元测试例子
+- 时间点交付
+
+$==============================================
+
+##### 8.2.3 基于typescript的karma+Jasmine单元测试【偏理论】
+- 准备好typeScript Configuration 如tsconfig.json
 - 介绍karma+jasmine的配置
     - 所需的依赖（Installation)
     - 环境配置搭建等（Configuration,如：karma.conf.js）
-- 如何写测试用例，具体可参考官网
-- 编写测试例子 需要覆盖Testing a Controller、Testing Filters、Testing Directives、Testing Promises的例子
+- 基本的Jasmine测试技能，具体可参考官网
+- 创建测试用例，需要涵盖 component test、Asynchronous Service等，包括构造断言逻辑，伪造组件（mock）等
+- 如何将测试用例集成到web应用中
 
-##### 8.2.4 编写第一个typeScript测试 
+$================= 2016-06-13 =================
+
+- 时间点交付
+
+$==============================================
+
+##### 8.2.4 编写测试与实践 【偏实践】
+- 根据当前quickstart设计一个测试demo需求【给出实现方案，具体可以找钱骞拉个会议，增加demo或者在原有的基础上拓展】
 - 搭建所需的依赖 Dependencies & Installing
 - 准备好typeScript Configuration 如tsconfig.json
-- 从quickStart中挑选demo来编写测试用例，需要涵盖 component test、Asynchronous Service
-- 导入测试模块
-- 运行测试代码
+- 根据设计的demo故事主线，编写测试用例，需要涵盖
+    - component test
+    - Asynchronous Service（Mocking HTTP Requests、test the same async service using Angular Dependency Injection）
+    - Test a Component in the DOM
 - 如何Debug测试 可从具体的一写tips写起
+- 打包发布
 
-可参考：
-- http://karma-runner.github.io/0.12/intro/installation.html
-- https://github.com/karma-runner/karma-jasmine
-- https://blog.logentries.com/2015/01/unit-testing-with-karma-and-jasmine-for-angularjs/
-- http://jasmine.github.io/edge/introduction.html
-- https://docs.angularjs.org/guide/unit-testing
-- https://github.com/AngularClass/angular2-webpack-starter
+$================= 2016-06-27 =================
+
+- 时间点交付：设计好demo需求，完成demo的书写，完成测试实践编写并有代码可以交付
+
+$==============================================
 
 #### 8.3 e2e test（简单介绍即可）
 - e2e test简介
@@ -832,6 +863,21 @@ $=================第一，第二作者: 2016-06-24 =================
 - 回顾本章核心内容
 - 罗列本节关键知识点
 - 为第三部分做个引出
+
+$================= 2016-07-04 =================
+
+- 时间点交付：完成所有以上测试内容
+
+$==============================================
+
+### 可参考：
+- http://karma-runner.github.io/0.12/intro/installation.html
+- https://github.com/karma-runner/karma-jasmine
+- https://blog.logentries.com/2015/01/unit-testing-with-karma-and-jasmine-for-angularjs/
+- http://jasmine.github.io/edge/introduction.html
+- https://docs.angularjs.org/guide/unit-testing
+- https://github.com/AngularClass/angular2-webpack-starter
+- http://blog.ng-book.com/category/testing/
 
 
 ## 第三章 实战
