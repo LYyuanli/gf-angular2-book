@@ -204,4 +204,6 @@ https://angular.io/docs/ts/latest/guide/style-guide.html
 
 和模板表达式一样，模板声明也不能引用任何全局对象，如`window`和`document`，同样也无法调用`console.log`或是`Math.min`。
 
+### 3.6 特殊排版
 
+按照Markdown格式来书写，如果需要特殊格式，请与接口人商量。
