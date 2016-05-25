@@ -1,5 +1,6 @@
 |英文名称|中文名称|简单释义|
 |:---|:---|:---|
+|Angular2|Angular2|Angular2|
 |Annotation|	注解	|装饰器的代名词|
 |Attribute Directive|	属性指令|	指令的一种
 |Barrel	|Barrel	|
