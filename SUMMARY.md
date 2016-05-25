@@ -7,6 +7,8 @@
    * [Typescript 语言简介](chapters/typescript_introduction.md)
    * [快速上手](chapters/quickstart.md)
 * [第二章 - 深入理解](chapters/part2.md)
+* [第五章 - 服务](chapters/2.5-1.md) 
+* [第五章 - 服务二](chapters/2.5-2.md)
 * [第六章 - 依赖注入](chapters/2.6-1.md) 
 * [第六章 - 依赖注入二](chapters/2.6-2.md) 
 
