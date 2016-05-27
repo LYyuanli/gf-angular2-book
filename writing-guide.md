@@ -11,7 +11,7 @@ slides地址：https://slides.com/lizhonghui/ng2/live
 
 ### 1.2 图片放置
 
-图片放置在『_images』文件夹（画图工具可见浪的writing-tools）。
+图片放置在『_images』文件夹（画图工具可见[writing-tools](https://github.com/gf-rd/gf-angular2-book/blob/master/writing-tools.md)）。
 
 引用地址：
 - https://github.com/(user)/(repo)/raw/master/path/to/image.gif
