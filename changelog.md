@@ -1,27 +1,26 @@
-### 3/7/8章小分队changelog(唐明-2016.05.27)
-#### 模板章节：
-- 袁野负责的3.1-3.4&3.7，本周处在搜集资料阶段，暂无输出物
-- 晓婷负责3.5-3.6章节，本周完成了学习预研，输出了3.5章的前4小节内容，内容pm还未review
+# 2016-05-27
+- 2-1: 收集资料阶段，启发性资源如下：（仲辉）
+    - http://victorsavkin.com/post/118372404541/the-core-concepts-of-angular-2
+    - http://developer.telerik.com/featured/front-end-application-frameworks-component-architectures/
+    - http://blog.thoughtram.io/angular/2016/02/22/angular-2-change-detection-explained.html
+- 2-2: NG2资源学习及Demo编写：(景湛)
+    - https://dzone.com/refcardz/rxjs-streams
+    - https://github.com/shlomiassaf/angular2-modal
+    - https://github.com/angular/material2
+    - https://github.com/liangjingzhan/fanfou
+- 2-3: 
+    - 袁野负责的3.1-3.4&3.7，本周处在搜集资料阶段，暂无输出物
+    - 晓婷负责3.5-3.6章节，本周完成了学习预研，输出了3.5章的前4小节内容，内容pm还未review
+- 2-4: 
+    - NG2学习以及Demo编写，周边工具学习（龚琪）
+- 2-5:
+    - 服务概述部分完成100%（邓玉龙）
+    - 响应式编程部分完成80%（coco）
+- 2-6：
+    - 依赖注入概述，NG2概述部分完成90%（姚云萍）
+    - Service注入Service部分完成70%（张淼） 
+- 2-7：
+    - 李远负责，处在资料收集和学习阶段【资料收集由唐明协助】
+- 2-8：
+    - 李泽扬负责，本周处在学习和了解测试的阶段，有引文输出，内容有待和作者沟通
 
-#### 路由章节：
-- 李远负责，处在资料收集和学习阶段【资料收集由唐明协助】
-
-#### 测试章节：
-- 李泽扬负责，本周处在学习和了解测试的阶段，有引文输出，内容有待和作者沟通
-
-————————
-#### 3、7、8章本次会议结论：
-- 关心进度与书写质量，方式为定期推动、团队氛围营造，主动checkout作者的输出物
-- 阶段性的提交交付物，由自己和作者来把控方向，及时在github上添加评注
-- 每次会议总结或者结论添加到changelog
-- 作者的学习参考资料可以开个issue沉淀
-- 第八章测试的时间节点重新再确定
-
-### 依赖注入 & 服务章节 第一次迭代（2016.5.27）
-#### 依赖注入  
- - 依赖注入概述，NG2概述部分完成90%（姚云萍）
- - Service注入Service部分完成70%（张淼）  
- 
-#### 服务  
-- 服务概述部分完成100%（邓玉龙）
-- 响应式编程部分完成80%（coco）
