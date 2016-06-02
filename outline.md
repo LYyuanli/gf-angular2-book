@@ -35,12 +35,10 @@
 - 早起页面IE6, java servelet
 - jQuery DOM开发(flash, 等)
 - 后jQuery时代，前MVC时代（Backbone，模块化require.js）
-- MVC时代（knockout, angular, ember，）
-
+- MVC时代（knockout, angular, ember，）  
 $================= 第一作者 2016-06-20 =================  
-
 - 新web，新标准（web components, service worker, v8，）
-- 后Web框架（angular2, react v4？, redux, reactive functional programming，等 - 参考[展望 Javascript 2016年的趋势和生态发展 #12](https://github.com/gaohailang/blog/issues/12)）
+- 后Web框架（angular2, react v4？, redux, reactive functional programming，等 - 参考[展望 Javascript 2016年的趋势和生态发展 #12](https://github.com/gaohailang/blog/issues/12)）  
 $================= 第一作者 2016-06-27 =================  
 
 #### 1.2 Angular2 简介
@@ -66,7 +64,7 @@ $==============================================<br>
 
 #### 1.3 TypeScript语言简介
 
-- 主要介绍和angular 2 珠联璧合的部分（如注解，类型系统，等等）
+- 主要介绍和angular 2 珠联璧合的部分（如注解，类型系统，等等）  
 $================= 第一作者 2016-06-20 =================  
 - Typescript介绍（类型，函数，模块，类）  
 $================= 第一，二作者 2016-07-01 =================  
